@@ -97,6 +97,7 @@ li {
 }
 
 .a6 button {
+    position: relative;
     background-color: transparent;
     border-radius: 5px;
     margin: auto;
@@ -104,6 +105,21 @@ li {
     height: 40px;
     font-size: 16px;
     cursor: pointer;
+    z-index: 0;
+}
+.a6 button::after{
+    content: "";
+    width: 0px;
+    height: 40px;
+    background-color: rgba(209, 14, 14, 0.929);
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    transition: 1s;
+}
+.a6 button:hover::after{
+    width: 100%;
 }
 
 .a5 {
@@ -206,7 +222,7 @@ li {
     border-radius: 40px;
     box-shadow: 0 0 20px 4px rgba(66, 66, 1, 0.519);
     position:absolute;
-    backface-visibility: hidden;
+    /* backface-visibility: hidden; */
     
 }
 /* .front{
@@ -302,18 +318,23 @@ li {
         .navigation-links ul li img {
             height: 20px;
         }
-
-/* jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj */
-.back1 {
-    background-color: transparent;
-    transition: transform 1s;
+.bck{
+    text-align: center;
+    margin: 20px;
+}
+.container {
     display: flex;
     justify-content: center;
-    align-items: center; /* Center the name vertically */
-    position: absolute;
-}
-
-.bac {
-    font-size: 24px;
-    color: rgb(0, 0, 0); /* Adjust color as needed */
-}
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #t1 {
+    opacity: 0; /* Initially hide the text */
+    transition: opacity 1s ease; /* Add transition for opacity */
+  }
+  
+  #t1:hover {
+    opacity: 1; /* Make the text fully visible on hover */
+  }
+  
