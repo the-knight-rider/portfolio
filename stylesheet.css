@@ -138,24 +138,9 @@ li {
     margin-right: 30px;
     perspective: 1000px;
     border-radius: 40px;
-    display: flex;
-    flex-direction: column;
-    
-    /* background-color: black; */
+    background-color:transparent;
 }
 
-.b1{
-    width: 15%;
-    height: 200px;
-  
-    
-    margin-left: 30px;
-    margin-right: 30px;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid black;
-          
-}
 
 .b11{
     text-align: center;
@@ -166,12 +151,10 @@ li {
     margin-top: 20px;
     font-size: 30px;
 }
-.b13{
-    text-align: center;
-}
+
 #a2{
     margin-top: 20px;
-    /* height: 100px; */
+   
     width:100px ;
 }
 
@@ -180,6 +163,20 @@ li {
     cursor: pointer;
     transform: rotateY(180deg);  
 }
+.con::after{
+    content: "";
+    width: 0px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    transition: 1s;
+}
+.con:hover::after{
+    width: 100%;
+}
+
 .card{
     /* common on both */
     height: 100%;
@@ -193,8 +190,17 @@ li {
 }
 
 
-.front,
-.back{
+.front
+{
+    height: 100%;
+    width: 100%;
+    border-radius: 40px;
+    box-shadow: 0 0 20px 4px rgba(66, 66, 1, 0.519);
+    position:absolute;
+    backface-visibility: hidden;
+    
+}
+.back1 {
     height: 100%;
     width: 100%;
     border-radius: 40px;
@@ -211,6 +217,103 @@ li {
     transition: rotateY(180deg);
     display: flex;
     justify-content: center;
-    
+    position: absolute;
+}
+.line1 {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+
+
 }
 
+.footer-content {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.copyright {
+    flex: 1;
+    text-align: right;
+}
+
+.goup button {
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+
+}
+
+.goup button img {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.navigation-links ul li img {
+    height: 20px;
+}
+
+ .line1 {
+            width: 100%;
+            height: 2px;
+            background-color: black;
+
+
+        }
+
+        .footer-content {
+            max-width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .copyright {
+            flex: 1;
+            text-align: right;
+        }
+
+        .goup button {
+            border-radius: 5px;
+            width: 100px;
+            height: 50px;
+
+        }
+
+        .goup button img {
+            margin: auto;
+            width: 100%;
+            height: 100%;
+        }
+
+        .navigation-links ul li img {
+            height: 20px;
+        }
+
+/* jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj */
+.back1 {
+    background-color: transparent;
+    transition: transform 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the name vertically */
+    position: absolute;
+}
+
+.bac {
+    font-size: 24px;
+    color: rgb(0, 0, 0); /* Adjust color as needed */
+}
