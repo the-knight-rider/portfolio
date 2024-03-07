@@ -68,24 +68,6 @@ li {
     flex-direction: column;
 }
 
-.back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.7;
-    background-image: url(images/photo-1531297484001-80022131f5a1.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-}
-
-main background-image {
-    opacity: 0.2;
-}
-
 .a1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: black;
@@ -128,10 +110,6 @@ main background-image {
     margin-left: 20px;
 }
 
-/* .s {
-    font: ;
-} */
-
 .line{
     width: 35%;
     height: 2px;
@@ -144,32 +122,44 @@ main background-image {
     font-size: 50px;
     text-align: center;
     margin-top: 100px;
+  
+    
 }
 .box{
     margin-top: 50px;
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
-    
-    
-    /* margin-left: 200px;
-    margin-right: 200px; */
-    
 }
+.con{
+    width: 15%;
+    height: 200px;
+    margin-left: 30px;
+    margin-right: 30px;
+    perspective: 1000px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    
+    /* background-color: black; */
+}
+
 .b1{
     width: 15%;
     height: 200px;
-    background-color: antiquewhite;
-    /* width: 20%; */
-    border-radius: 40px;
+  
+    
     margin-left: 30px;
     margin-right: 30px;
     display: flex;
     flex-direction: column;
+    border: 2px solid black;
+          
 }
 
 .b11{
     text-align: center;
+    border: 20px;
 }
 .b12{
     text-align: center;
@@ -183,5 +173,44 @@ main background-image {
     margin-top: 20px;
     /* height: 100px; */
     width:100px ;
-
 }
+
+
+.con:hover > .card{
+    cursor: pointer;
+    transform: rotateY(180deg);  
+}
+.card{
+    /* common on both */
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    border: 2px solid black;
+    border-radius: 40px;
+    box-shadow: 0 0 20px 4px rgba(66, 66, 1, 0.519);
+}
+
+
+.front,
+.back{
+    height: 100%;
+    width: 100%;
+    border-radius: 40px;
+    box-shadow: 0 0 20px 4px rgba(66, 66, 1, 0.519);
+    position:absolute;
+    backface-visibility: hidden;
+    
+}
+/* .front{
+   
+} */
+.back1{
+    background-color: transparent;
+    transition: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    
+}
+
