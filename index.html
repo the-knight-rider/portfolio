@@ -27,9 +27,9 @@
                 <!-- <li>Internships</li>
                 <li>Hackathons</li>
                 <li>Extracurricular Activities</li> -->
-                <li>Guides</li>
+                <li><a href="">Guides</a></li>
                 <li><a href="#Contact">Contact</a></li>
-                <img id="dark" src="images/night-mode.png" alt="">
+                <img id="dark" src="images/night-mode.png" >
             </ul>
         </div>
     </div>
@@ -240,8 +240,8 @@
         <div class="line1"></div>
         <div class="footer-content">
             <div class="contact-info">
-                <p>Contact: <a href="mailto:adityathecoolboy22@gmail.com">adityathecoolboy22@gmail.com</a></p>
-                <p>Phone: <a href="tel:9158900465">9158900465</a></p>
+                <p>Email: <a href="mailto:adityamshimpi@gmail.com">adityamshimpi@gmail.com</a></p>
+                <!-- <p>Phone: <a href="tel:9158900465">9158900465</a></p> -->
                 <p>Follow me: <a href="https://www.linkedin.com/in/adityashimpi22/">LinkedIn</a></p>
             </div>
             <div class="navigation-links">
@@ -257,7 +257,12 @@
             </div>
         </div>
     </footer>
-    
+    <script>
+        var dark = document.getElementById("dark");
+        dark.onclick=function(){
+            document.body.classList.toggle("dark-theme");
+        }
+    </script>
 </body>
 
 </html>

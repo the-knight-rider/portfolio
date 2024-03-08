@@ -5,19 +5,41 @@ body {
     margin: 0px;
     padding: 0px;
    
-    /* background: black; */
-    /* background-color: rgb(6, 6, 48); */
+    background: var(--fouth);
+    /* change color of whole background */
+    
+    
+    
 
 }
-
+:root{
+    --prime:#18a622;
+    --second:#b21616;
+}
+.dark-theme{
+    --prime: rgba(41, 40, 40, 0.919);
+    --second:#d3cdcdbb;
+    --third:rgb(255, 255, 255);
+    --fouth:#000000;
+    --fifth: rgba(255, 254, 254, 0.764);
+    --six:rgba(171, 168, 168, 0.756);
+    --seven:rgb(246, 10, 10);
+    --8:rgb(11, 11, 11);
+    --1:rgb(48, 47, 47);
+    --2:rgba(239, 231, 13, 0.596);
+    --3:rgb(255, 255, 255);
+    --4:rgb(109, 108, 108);
+    --5:#28272760;
+    --6:rgba(255, 47, 0, 0.442);
+}
 .nav {
     
     position:fixed;
     z-index: 1000;
     width: 100%;
     height: 60px;
-    background-color: rgb(9, 52, 82);
-    color:rgb(249, 244, 244);
+    background-color:var(--prime);    /* navigation bar background color */
+    color:var(--third);              /* nav bar orignal showcase color */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -30,15 +52,15 @@ h2 {
 ul{
     font-size: 20px;
     display: flex;
-    color: rgb(0, 0, 0);
+    
 }
 a{
-    color: black;
+    color: var(--second);                /* nav bar contents color */
     text-decoration: none;
 }
 
 li {
-    background-color: aliceblue;
+   background-color:var(transparent); /* nav bar contents background color */
     margin: 20px;
     padding: 5px;
     border-radius: 6px;
@@ -46,7 +68,7 @@ li {
     list-style: none;
 }
 
-#dark {
+#dark {                                      /* dark mode toggle image */
     width: 60px;
     height: 60px;
     margin: auto;
@@ -67,11 +89,13 @@ li {
     width: 500px;
     height: auto;
     border-radius: 30%;
+    border: 1px solid rgb(0, 0, 0);      /*border of photo */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 
 .about {
-    color: rgb(243, 249, 245);
+    color: rgb(43, 14, 236);                           /*nothing */
     font-size: 20px;
     margin-top: auto;
     margin-bottom: auto;
@@ -81,12 +105,13 @@ li {
 
 .a1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: black;
+    color: var(--third);                         /*hi i am aditya  color*/
     font-size: 70px;
+    font-weight: 500000;
 }
 
 .a2 {
-    color: black;
+    color: var(--fifth);                /*passionate color */
     font-size: 30px;
     font-style: oblique;
     
@@ -95,7 +120,7 @@ li {
 .a3 {
     margin-top: 20px;
     font-size: 20px;
-    color: black;
+    color: var(--six);           /*it engineer color */
 }
 
 .a6 {
@@ -108,8 +133,9 @@ li {
 }
 
 .a6 button {
+    color: var(--seven);                                 /* button  color*/
     position: relative;
-    background-color: transparent;
+    background-color: var(--8);                  /* button background color*/
     border-radius: 5px;
     margin: auto;
     width: 100px;
@@ -122,7 +148,7 @@ li {
     content: "";
     width: 0px;
     height: 40px;
-    background-color: rgba(190, 175, 175, 0.216);
+    background-color: rgba(190, 175, 175, 0.216);   /* button background hover color*/
     border-radius: 5px;
     position: absolute;
     left: 0;
@@ -141,7 +167,7 @@ li {
 .line{
     width: 35%;
     height: 2px;
-    background-color: black;
+    background-color:var(--1);    /* line color*/
     margin: auto;
     border-radius: 10px;
 }
@@ -150,6 +176,7 @@ li {
     font-size: 50px;
     text-align: center;
     margin-top: 100px;
+    color: var(--third);                 /* skills project etc color*/
   
     
 }
@@ -166,7 +193,7 @@ li {
     margin-right: 30px;
     perspective: 1000px;
     border-radius: 40px;
-    background-color:transparent;
+    background-color:transparent;        /* animated box background color*/       
 }
 
 
@@ -178,6 +205,7 @@ li {
     text-align: center;
     margin-top: 20px;
     font-size: 30px;
+    color: var(--3);                   /* skill name color*/
 }
 
 #a2{
@@ -195,7 +223,7 @@ li {
     content: "";
     width: 0px;
     height: 2px;
-    background: black;
+    background: var(--2);                  /* box below line color*/
     position: absolute;
     left: 0;
     bottom: -20px;
@@ -212,7 +240,8 @@ li {
     position: relative;
     transition: transform 1s;
     transform-style: preserve-3d;
-    border: 2px solid black;
+    border: 2px solid ;    
+    border-color: var(--second);                /* animated box border color*/
     border-radius: 40px;
     box-shadow: 0 0 20px 4px rgba(66, 66, 1, 0.519);
 }
@@ -223,7 +252,7 @@ li {
     height: 100%;
     width: 100%;
     border-radius: 40px;
-    box-shadow: 0 0 20px 4px rgba(66, 66, 1, 0.519);
+    box-shadow: 0 0 20px 4px rgba(66, 66, 1, 0.519);            /* animated box shadow color*/
     position:absolute;
     backface-visibility: hidden;
     
@@ -232,7 +261,7 @@ li {
     height: 100%;
     width: 100%;
     border-radius: 40px;
-    box-shadow: 0 0 20px 4px rgba(66, 66, 1, 0.519);
+    box-shadow: 0 0 20px 4px rgba(66, 66, 1, 0.519);           /* animated box shadow color*/
     position:absolute;
     /* backface-visibility: hidden; */
     
@@ -241,7 +270,7 @@ li {
    
 } */
 .back1{
-    background-color: transparent;
+    background-color: transparent;     /* do not change*/
     transition: rotateY(180deg);
     display: flex;
     justify-content: center;
@@ -250,7 +279,7 @@ li {
 .line1 {
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color:var(--1);     /* footer line color*/
 
 
 }
@@ -262,72 +291,45 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: rgb(0, 0, 0);               /* footer info color*/
 }
 
 .contact-info {
     flex: 1;
+}
+.contact-info p{
+    color:var(--six) ;
 }
 
 .copyright {
     flex: 1;
     text-align: right;
 }
+.copyright p{
+    color:var(--six) ;
+}
 
-.goup button {
+/* .goup button {
     border-radius: 5px;
     width: 100px;
     height: 50px;
 
-}
+} */
 
-.goup button img {
+/* .goup button img {
     margin: auto;
     width: 100%;
     height: 100%;
-}
+} */
 
 .navigation-links ul li img {
     height: 20px;
 }
 
-
-        .footer-content {
-            max-width: 80%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .contact-info {
-            flex: 1;
-        }
-
-        .copyright {
-            flex: 1;
-            text-align: right;
-        }
-
-        .goup button {
-            border-radius: 5px;
-            width: 100px;
-            height: 50px;
-
-        }
-
-        .goup button img {
-            margin: auto;
-            width: 100%;
-            height: 100%;
-        }
-
-        .navigation-links ul li img {
-            height: 20px;
-        }
-.bck{
+/* .bck{
     text-align: center;
     margin: 20px;
-}
+} */
 .container {
     display: flex;
     justify-content: center;
@@ -335,13 +337,16 @@ li {
     height: 100vh;
   }
   
-  #t1 {
-    opacity: 0; /* Initially hide the text */
-    transition: opacity 1s ease; /* Add transition for opacity */
+  /* #t1 {
+    opacity: 0; 
+    transition: opacity 1s ease; 
   }
   
   #t1:hover {
-    opacity: 1; /* Make the text fully visible on hover */
+    opacity: 1; 
+  } */
+  .c11{
+    color: rgb(225, 9, 63);               /* project card header color*/
   }
   .p1{
     margin-top: 50px;
@@ -358,32 +363,33 @@ li {
     height: 300px;
     padding: 30px;
    border-radius: 15px;
-    border: 2px solid black;
-    
+    border: 2px solid ;             /* project card border color*/
+    border-color: var(--4);
     
     background-repeat: no-repeat;
   }
   
   #c1{
-    background-color: #ff9933e0;
-    background-image: url("images//test.avif");
+    background-color: var(--5);             /* project card 1 image ke back wala color*/
+    /* background-image: url("images//test.avif"); */
   }
   #c2{
-    background-image: url(images/pu.png);
-    background-size: 280%;
+    /* background-image: url(images/pu.png); */
+    /* background-size: cover; */
+    background-color: var(--5); 
   }
   #c3{
-    background-image: url(images/te.jpg);
+    /* background-image: url(images/te.jpg); */
    
-    background-size: 260%;
-    z-index: 0;
+    background-size: cover;
+    z-index: -1000;
     
-    background-color:  #138808;
+    background-color: var(--5);        /* project card 1 image ke back wala color*/
   }
-  .c12{
+  .c12{                                        /* project card information color*/
     padding-top: 20px;
-    font-size: 20px;
-    color: rgb(56, 199, 34);
+    font-size: 17px;
+    color: var(--3);          /* project card info color*/
     
   }
   .c4 button img{
@@ -397,13 +403,13 @@ li {
     width: 60px;
     height: 60px;
     border-radius: 50px;
-    background-color: orange;
+    background-color: rgb(68, 61, 49);            /* project card link image background color*/
 
   }
 .line2{
     width: 35%;
     height: 3px;
-    background-color: black;
+    background-color: var(--1) ;           /* project card below line color*/
     margin: auto;
     margin-top: 50px;
     margin-bottom: 100px;
@@ -426,22 +432,32 @@ li {
 .address form input,.address form textarea,.address form button{
     margin: 5px;
     border-radius: 5px;
-    background-color: transparent;
+    color: var(--3);               /* input form text color*/ 
+    border-color: var(--6);               /* input form border color*/ 
+    background-color: transparent;    /* form background color*/
     resize: none;
 }
 .address form button{
     width: 40% ;
-    background-color: transparent;
+    background-color: var(--8);      /* form button background color*/
     border-radius: 5px;
     margin: auto;
     width: 100px;
     height: 40px;
-    font-size: 16px;
+    font-size: 16px;                
     cursor: pointer;
+    border-color: #e60c0c;          /* send form button border color*/ 
+    color: var(--seven);                     /* send form button text color*/      
 }
+/* input::placeholder {
+    color: #d61010; } */
+    
+    /* form place holder color */
+
 .address form textarea{
     width: 98%;
-    font-size: 14px;
+    font-size: 14px; 
+    color: rgb(0, 0, 0);     /* form messsage input textarea color*/      
 }
 
 .upper-section input{
@@ -453,8 +469,8 @@ li {
 }
 
 #msg{
-    color: black;
-    background-color: rgba(128, 128, 128, 0.215);
+    color: black;           /* form messsage 5 sec color*/
+    background-color: rgba(128, 128, 128, 0.215);       /* form messsage background 5 sec color*/
     border-radius: 20px;
 }
 
