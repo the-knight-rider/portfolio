@@ -400,18 +400,58 @@ li {
     border-radius: 10px;   
 }
 
+.contact-section{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.address form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.address form input,.address form textarea,.address form button{
+    margin: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    resize: none;
+}
+.address form button{
+    width: 40% ;
+    background-color: transparent;
+    border-radius: 5px;
+    margin: auto;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.address form textarea{
+    width: 98%;
+    font-size: 14px;
+}
+
+.upper-section input{
+    height: 40px;
+    width: 40vh;
+    font-size: 14px;
+    margin:auto;
+    text-align:start;
+}
+
+#msg{
+    color: black;
+    background-color: rgba(128, 128, 128, 0.215);
+    border-radius: 20px;
+}
 
 
-
-
-
-
-
-
-
-
-
-
+html{
+    scroll-behavior: smooth;
+}
 
 
 

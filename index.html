@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio-Aditya </title>
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js"></script>
+
     <style>
 
     </style>
@@ -17,8 +19,9 @@
             <h2>Original Showcase</h2>
         </div>
         <div class="navr">
+            <div id="navr">
             <ul>
-                <li>Introduction</li>
+                <li><a href="#navr">Introduction</a></li>
                 <li>Skills</li>
                 <li>Projects</li>
                 <li>Certifications</li>
@@ -29,6 +32,7 @@
                 <li>Contact</li>
                 <img id="dark" src="images/night-mode.png" alt="">
             </ul>
+        </div>
         </div>
     </div>
     <main>
@@ -196,21 +200,39 @@
         </div>
 
         <div class="contact-section">
-            <div class="address-left">
-                <div class="address-left-section">
-                    <div class="heading-add">Address</div>
-                    <div class="address1">310 Kingston House Gulabtara Heights near GH Raisoni College road Wagholi,
-                        Pune411207</div>
-                    <div class="heading-add">Email Id</div>
-                    <div class="email1"><a href="mailto:adityathecoolboy22@gmail.com">adityamshimpi@gmail.com</a></div>
-                </div>
-            </div>
-            <div class="address-right">
-                <div class="address-right-section">
-                    
-                </div>
+            <div class="address">
+
+
+                <form name="submit-to-google-sheet" >
+                    <div class="upper-section">
+                        <input type="text" name="Name" placeholder="Name" required="required">
+                        <input type="email" name="Email" placeholder="Email" required="required"><br>
+                    </div>
+                    <div class="upper-section">
+                        <input type="tel" name="Mobile" placeholder="Mobile Number" required="required">
+                        <input type="text" name="Subject" placeholder="Subject" required="required"><br>
+                    </div>
+                    <textarea name="Message" placeholder="Enter Your Message Here..." id="" cols="30" rows="10"></textarea>
+                    <br><button type="submit">Send</button><br>
+                    <div id="msg"></div>
+
+                </form>
+
             </div>
         </div>
+        <script>const scriptURL = 'https://script.google.com/macros/s/AKfycbxgCUaDotppj3P8dnsgd2goUnN-AQZc27SiNu0d2T462IJ7_SJgR4xuU1AtgvcbqjyN/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {msg.innerHTML="Message Sent Succesfully"
+            setTimeout(function(){
+                msg.innerHTML=""},5000)
+                form.reset()
+            })
+                .catch(error => console.error('Error!', error.message))
+            })</script>
     </section>
 
 
@@ -237,7 +259,7 @@
             </div>
         </div>
     </footer>
-
+    
 </body>
 
 </html>
