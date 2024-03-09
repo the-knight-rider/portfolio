@@ -105,8 +105,9 @@ li {
 }
 
 #photo img {
-    width: 500px;
     height: auto;
+    width: 70vh;
+    
     border-radius: 30%;
     border: 1px solid rgb(0, 0, 0);      /*border of photo */
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
@@ -567,11 +568,42 @@ html{
  /* nav bar complited */
 
 
- 
+ .intro{
+    display: none;
+ }
 
-
-
-
+ .intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+#photo img{
+    height:30vh;
+    width: auto;
+}
+.about{
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+}
+.a1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--third);                         /*hi i am aditya  color*/
+    font-size: 30px;
+    font-weight: 500000;
+}
+.a2 {
+    color: var(--fifth);                /*passionate color */
+    font-size: 20px;
+    font-style: oblique;  
+}
+.a3 {
+    margin-top: 20px;
+    font-size: 15px;
+    color: var(--six);  
+    text-align: left;         /*it engineer color */
+}
 
 
 
