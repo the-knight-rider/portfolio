@@ -567,9 +567,12 @@ html{
      
  /* nav bar complited */
 
-
+ /* #Introduction {
+    margin-top: -50px; 
+} */
  .intro{
     display: none;
+    padding-top: 5vh;
  }
 
  .intro{
@@ -577,6 +580,7 @@ html{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
  }
 #photo img{
     height:30vh;
@@ -588,15 +592,17 @@ html{
     width: 80%;
 }
 .a1{
+    margin-top: 25px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: var(--third);                         /*hi i am aditya  color*/
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 500000;
 }
 .a2 {
     color: var(--fifth);                /*passionate color */
     font-size: 20px;
     font-style: oblique;  
+    margin-top: 10px;
 }
 .a3 {
     margin-top: 20px;
