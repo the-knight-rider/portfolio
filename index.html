@@ -34,9 +34,9 @@
         </div>
     </div>
 
-
-    <div class="navm">
-        <span class="menu"><img src="images/close.png" alt="" ></span>
+    <span id="menu1" class="menu1" onclick="openmenu()"><img src="images/menu-bar.png" alt="" ></span>
+    <div id="sidemenu" class="navm">
+        <span class="menu" onclick="closemenu()"><img src="images/close.png" alt="" ></span>
         <ul>
             <br>
             <br>
@@ -285,6 +285,15 @@
             } else {
                 dark.src="images/night-mode.png";
             }
+        }
+    </script>
+    <script>
+        var sidemeu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemeu.style.left="0px";
+        }
+        function closemenu(){
+            sidemeu.style.left="-200px";
         }
     </script>
 </body>

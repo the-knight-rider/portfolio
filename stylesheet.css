@@ -500,44 +500,49 @@ html{
 
 
 .navm{display: none;}
+.menu1 img{display: none;}
 
 
 
 
 
 @media only screen and (max-width: 600px){
-    
+    .menu1 img{
+        display: block;
+        height: 30px;
+        background:rgb(0, 115, 255);
+        border-radius: 3px;
+    }
     .nav { 
         display: none;    
     }
     .navm {
-        display: block;
+        display:block;
         position:fixed;
         z-index: 3;
-        width: 140px;
+        width: 150px;
         top: 0;
         left: 0;
         height: 100vh;
         padding-top:0px;
         background-color:var(--prime);    /* navigation bar background color */
-        color:transparent;              /* nav bar orignal showcase color */
+        color:transparent;
+        transition: left 0.5s;              /* nav bar orignal showcase color */
     }
     
     .navm img{
         position: absolute;
         height:25px;
-        margin: 5px;
+        margin: 8px;
         padding: 5px;
         right:0px;
         cursor: pointer;
     }
     .navm ul{
         padding-left: 0;
-
         display: flex;
         flex-direction: column;
         align-items:center;
-        /* background-color: #e60c0c; */
     }
     h2 {
         font-size:0px;
@@ -559,6 +564,10 @@ html{
          list-style: none;
      }
      
+ /* nav bar complited */
+
+
+ 
 
 
 
