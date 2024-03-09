@@ -33,6 +33,23 @@
             </ul>
         </div>
     </div>
+
+
+    <div class="navm">
+        <div class="menu"><img src="images/close.png" alt="" ></div>
+        <ul>
+            <li><a href="#Introduction">Introduction</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#">Certifications</a></li>
+            <!-- <li>Internships</li>
+            <li>Hackathons</li>
+            <li>Extracurricular Activities</li> -->
+            <li><a href="">Guides</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <!-- <img id="dark" src="images/night-mode.png" > -->
+        </ul>
+    </div>
     <main>
         <!-- <div class="back"></div> -->
         <div id="Introduction" class="intro">
@@ -259,8 +276,13 @@
     </footer>
     <script>
         var dark = document.getElementById("dark");
-        dark.onclick=function(){
+        dark.onclick=function() {
             document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+                dark.src = "images/light-mode.png";
+            } else {
+                dark.src="images/night-mode.png";
+            }
         }
     </script>
 </body>
