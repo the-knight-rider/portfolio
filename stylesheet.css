@@ -197,8 +197,6 @@ li {
     text-align: center;
     margin-top: 100px;
     color: var(--third);                 /* skills project etc color*/
-  
-    
 }
 .box{
     margin-top: 50px;
@@ -275,7 +273,6 @@ li {
     box-shadow: 0 0 20px 4px rgba(66, 66, 1, 0.519);            /* animated box shadow color*/
     position:absolute;
     backface-visibility: hidden;
-    
 }
 .back1 {
     height: 100%;
@@ -283,8 +280,7 @@ li {
     border-radius: 40px;
     box-shadow: 0 0 20px 4px rgba(66, 66, 1, 0.519);           /* animated box shadow color*/
     position:absolute;
-    /* backface-visibility: hidden; */
-    
+    /* backface-visibility: hidden; */    
 }
 /* .front{
    
@@ -502,6 +498,9 @@ html{
 
 .navm{display: none;}
 .menu1 img{display: none;}
+.a7{
+    display: none;
+}
 
 
 
@@ -510,6 +509,7 @@ html{
 @media only screen and (max-width: 600px){
     .menu1 img{
         display: block;
+        margin: 10px;
         height: 30px;
         background:rgb(0, 115, 255);
         border-radius: 3px;
@@ -610,14 +610,86 @@ html{
     color: var(--six);  
     text-align: left;         /*it engineer color */
 }
+.a6{
+   display: none;
+}
+.a7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.a7 button {
+    color: var(--seven);                                 /* button  color*/
+    position: relative;
+    background-color: var(--8);                  /* button background color*/
+    border-radius: 5px;
+    margin: auto;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1;
+}
+.a7 button::after{
+    content: "";
+    width: 0px;
+    height: 40px;
+    background-color: rgba(190, 175, 175, 0.216);   /* button background hover color*/
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    transition: 1s;
+    z-index:0;
+}
+.a7 button:hover::after{
+    width: 100%;
+}
 
 
 
-
-
-
-
-
+.s{  
+    margin: auto;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 100px;
+    color: var(--third);                 /* skills project etc color*/
+}
+.box{
+    display: none;
+}
+.box{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.con{
+    display: none;
+}
+.con{
+    display: block;
+    width: 30%;
+    height: 16vh;
+    margin: 30px;
+    perspective: 1000px;
+    border-radius: 40px;
+    background-color:transparent;        /* animated box background color*/       
+}
+.footer-content {
+   display: none;               
+}
+.footer-content {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(0, 0, 0);               /* footer info color*/
+}
 
 
 
