@@ -455,7 +455,6 @@ li {
 }
 .address form input,.address form textarea,.address form button{
     margin: 5px;
-    
     border-radius: 5px;
     color: var(--3);               
     border-color: var(--6);               
@@ -816,7 +815,7 @@ footer{
     display: block;
 }
 .contact-section{
-    /* padding-top: 50px; */
+    padding-top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -863,12 +862,22 @@ footer{
 
 
 
+.mobile-line-footer{
+width: 100%;
+    height: 2px;
+    background-color:var(--1);    /* line color*/
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 4vh;
+    border-radius: 10px;
 
 
-
-
-
-
+}
+.mobile-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 }
 
