@@ -29,17 +29,19 @@
                 <li>Extracurricular Activities</li> -->
                 <li><a href="">Guides</a></li>
                 <li><a href="#Contact">Contact</a></li>
-                <img id="dark" src="images/night-mode.png" >
+                <img id="dark" src="images/night-mode.png">
             </ul>
         </div>
     </div>
-<div class="mobile-navup-fixed">
-    <span id="menu1" class="menu1" onclick="openmenu()"><img src="images/menu-bar.png" alt="" ></span>
-    <div class="orignal-showcase-nav"> <h2>Original Showcase</h2></div>
-    <div id="dark" class="dark" class="mobile-nav-darkmode"><img id="dark" src="images/night-mode.png" ></div>
-</div>
+    <div class="mobile-navup-fixed">
+        <span id="menu1" class="menu1" onclick="openmenu()"><img src="images/menu-bar.png" alt=""></span>
+        <div class="orignal-showcase-nav">
+            <h2>Original Showcase</h2>
+        </div>
+        <div id="dark" class="dark" class="mobile-nav-darkmode"><img id="dark" src="images/night-mode.png"></div>
+    </div>
     <div id="sidemenu" class="navm">
-        <span class="menu" onclick="closemenu()"><img src="images/close.png" alt="" ></span>
+        <span class="menu" onclick="closemenu()"><img src="images/close.png" alt=""></span>
         <ul>
             <br>
             <br>
@@ -63,9 +65,10 @@
             <div class="about">
                 <div class="a1">Hi, I'm Aditya Shimpi</div>
                 <div class="a2">Passionate about Work</div>
-                <div class="a3">An IT Engineer seeking a fresh start, <br>Passionate about problem solving and technical
+                <div class="a3">An IT Engineer pursuing B.Tech in Information Technology with Honour in Artificial
+                    Intelligence and Machine Learning. <br>Passionate about problem solving and technical
                     develpoments. <br> Dedicated to crafting impactful solutions that inspire and elevate. <br>Let's
-                    collaborate and bring ideas to life!</div>
+                    connect, collaborate and unleash our potential to bring ideas to life!</div>
                 <div class="a6">
                     <div class="a4">
                         <button>Resume</button>
@@ -82,11 +85,11 @@
         </div>
     </main>
 
-    
-    
+
+
     <div id="Skills" class="line"> </div>
     <skills>
-        <div  class="s">Skills To Offer</div>
+        <div class="s">Skills To Offer</div>
         <div class="box">
             <div class="con">
                 <div class="card">
@@ -182,7 +185,7 @@
         </div>
 
     </skills>
-    <div id="Projects" class="line"> </div>
+    <!-- <div id="Projects" class="line"> </div> -->
     <!-- <projects>
         <div  class="s">Projects</div>
         <div class="p1">
@@ -215,12 +218,12 @@
  -->
 
 
-    <div id="Contact" class="line2"></div>
+    <!-- <div id="Contact" class="line2"></div> -->
 
 
 
     <section>
-        <div  class="contactme">
+        <div class="contactme">
             <div class="s">Contact Me</div>
         </div>
 
@@ -228,7 +231,7 @@
             <div class="address">
 
 
-                <form name="submit-to-google-sheet" >
+                <form name="submit-to-google-sheet">
                     <div class="upper-section">
                         <input type="text" name="Name" placeholder="Name" required="required">
                         <input type="email" name="Email" placeholder="Email" required="required"><br>
@@ -237,7 +240,8 @@
                         <input type="tel" name="Mobile" placeholder="Mobile Number" required="required">
                         <input type="text" name="Subject" placeholder="Subject" required="required"><br>
                     </div>
-                    <textarea name="Message" placeholder="Enter Your Message Here..." id="" cols="30" rows="10"></textarea>
+                    <textarea name="Message" placeholder="Enter Your Message Here..." id="" cols="30"
+                        rows="10"></textarea>
                     <br><button type="submit">Send</button><br>
                     <div id="msg"></div>
 
@@ -249,14 +253,16 @@
             const form = document.forms['submit-to-google-sheet']
             const msg = document.getElementById("msg")
             form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {msg.innerHTML="Message Sent Succesfully"
-            setTimeout(function(){
-                msg.innerHTML=""},5000)
-                form.reset()
-            })
-                .catch(error => console.error('Error!', error.message))
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => {
+                        msg.innerHTML = "Message Sent Succesfully"
+                        setTimeout(function () {
+                            msg.innerHTML = ""
+                        }, 5000)
+                        form.reset()
+                    })
+                    .catch(error => console.error('Error!', error.message))
             })</script>
     </section>
 
@@ -285,22 +291,22 @@
     </footer>
     <script>
         var dark = document.getElementById("dark");
-        dark.onclick=function() {
+        dark.onclick = function () {
             document.body.classList.toggle("dark-theme");
-            if(document.body.classList.contains("dark-theme")){
+            if (document.body.classList.contains("dark-theme")) {
                 dark.src = "images/light-mode.png";
             } else {
-                dark.src="images/night-mode.png";
+                dark.src = "images/night-mode.png";
             }
         }
     </script>
     <script>
-        var sidemeu=document.getElementById("sidemenu");
-        function openmenu(){
-            sidemeu.style.left="0px";
+        var sidemeu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemeu.style.left = "0px";
         }
-        function closemenu(){
-            sidemeu.style.left="-200px";
+        function closemenu() {
+            sidemeu.style.left = "-200px";
         }
     </script>
 
@@ -310,40 +316,152 @@
 
 
 
-<div class="mobile">
-    <div class="mobile-nav"></div>
-    <div class="intro"></div>
-    <div class="mobile-skills"></div>
-    <div class="mobile-projects"></div>
-    <div class="mobile-contacts"></div>
-    <div class="mobile-footer"></div>
-</div>
+    <div class="mobile">
+        <div class="mobile-nav"></div>
+        <div class="s1">Skills To Offer</div>
+        <div class="mobile-skills">
+            <div class="mobcon1">
+                <div class="sk">
+                    <div class="skill-image">
+                        <img id="skill-image1" src="images/python.png" alt="">
+                    </div>
+                    <div class="skill-name">
+                        Python
+                    </div>
+                </div>
+                <div class="sk">
+                    <div class="skill-image">
+                        <img id="skill-image1" src="images/c-.png" alt="">
+                    </div>
+                    <div class="skill-name">
+                        C++
+                    </div>
+                </div>
+                <div class="sk">
+                    <div class="skill-image">
+                        <img id="skill-image1" src="images/java.png" alt="">
+                    </div>
+                    <div class="skill-name">
+                        Java
+                    </div>
+                </div>
+            </div>
+            <div class="mobcon1">
+                <div class="sk">
+                    <div class="skill-image">
+                        <img id="skill-image1" src="images/hypothesis.png" alt="">
+                    </div>
+                    <div class="skill-name">
+                        Problem Solving
+                    </div>
+                </div>
+                <div class="sk">
+                    <div class="skill-image">
+                        <img id="skill-image1" src="images/server.png" alt="">
+                    </div>
+                    <div class="skill-name">
+                        DBMS
+                    </div>
+                </div>
+                <div class="sk">
+                    <div class="skill-image">
+                        <img id="skill-image1" src="images/database.png" alt="">
+                    </div>
+                    <div class="skill-name">
+                        Cloud Computing
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-line"> </div>
+        <div class="mobile-projects">
+            <div class="s1">Projects</div>
+            <div class="projects-made">
+                <div class="projects-display">
+                    <div class="projects-heading">
+                        NewzInn
+                    </div>
+                    <div class="projects-content">
+                        An interactive platform leveraging advanced language processing to summarize user based
+                        queries, focusing on relevance of suggestions and interface usability as primary evaluation
+                        criteria.
+                    </div>
+                </div>
+                <div class="projects-display">
+                    <div class="projects-heading">
+                        Monkey Mania
+                    </div>
+                    <div class="projects-content">
+                        A 2D platformer featuring challenges for the user to guide the subject through
+                        obstacles and climb walls, whilst collecting power ups to win at the end of all levels of
+                        climbing
+                        elevation.
+                    </div>
+
+                </div>
+                <div class="projects-display">
+                    <div class="projects-heading">
+                        Androida
+                    </div>
+                    <div class="projects-content">
+                        An application leveraging Google Maps API to enable users to access their
+                        real-time/live location and explore their neighborhood along with other relevant and necessary
+                        sites.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="mobile-contacts">
+            <div class="mobile-line"> </div>
+            <div class="s1">Contact Me</div>
+            <div class="mobile-form">
+                <div class="mobile-first-row">
+                    <input type="text" name="Name" placeholder="Name" required="required">
+                    <input type="email" name="Email" placeholder="Email" required="required">
+                </div>
+                <div class="mobile-first-row">
+                    <input type="tel" name="Mobile" placeholder="Mobile Number" required="required">
+                    <input type="text" name="Subject" placeholder="Subject" required="required"><br>
+                </div>
+                <div class="mobile-first-row">
+                    <textarea name="Message" placeholder="Enter Your Message Here..." id="" cols="30"
+                        rows="10"></textarea>
+                </div>
+                <div class="mobile-first-row">
+                    <button type="submit">Send</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="mobile-footer"></div>
+    </div>
 
 
 
 
 
-<script>
-    var sidemeu=document.getElementById("sidemenu");
-    sidemenu.style.left = "-200px";
-    function openmenu(){
-        sidemeu.style.left="0px";
-    }
-    function closemenu(){
-        sidemeu.style.left="-200px";
-    }
-</script>
-<script>
-    var dark = document.getElementById("dark");
-    dark.onclick=function() {
-        document.body.classList.toggle("dark-theme");
-        if(document.body.classList.contains("dark-theme")){
-            dark.src = "images/light-mode.png";
-        } else {
-            dark.src="images/night-mode.png";
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+        sidemenu.style.left = "-200px";
+        function openmenu() {
+            sidemeu.style.left = "0px";
         }
-    }
-</script>
+        function closemenu() {
+            sidemeu.style.left = "-200px";
+        }
+    </script>
+    <script>
+        var dark = document.getElementById("dark");
+        dark.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                dark.src = "images/light-mode.png";
+            } else {
+                dark.src = "images/night-mode.png";
+            }
+        }
+    </script>
 
 
 

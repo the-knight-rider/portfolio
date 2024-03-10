@@ -98,7 +98,7 @@ li {
     position: relative;
     z-index: 1;
     display: flex;
-    padding-top: 100px;
+    padding-top: 130px;
     margin: auto;
     justify-content: space-around;
     padding-bottom: 100px;
@@ -141,6 +141,7 @@ li {
     margin-top: 20px;
     font-size: 20px;
     color: var(--six);           /*it engineer color */
+    width: 100vh;
 }
 
 .a6 {
@@ -572,15 +573,19 @@ html{
         border-radius: 3px;
     }
     .orignal-showcase-nav h2{
-        text-align: center;
         margin: 10px;
         /* position: ; */
         z-index: 3;
         color:var(--fouth);
         font-size: 25px;
+        margin-left: 4.5vh;
     }
-    .mobile-nav-darkmode{
+    #dark img{
+        height: 6vh;
+        width: auto;
         z-index: 3;
+        margin-left: 1vh;
+        margin-top: 0.5vh;
     }
     .nav { 
         display: none;    
@@ -641,6 +646,7 @@ html{
  .intro{
     display: none;
     padding-top: 12vh;
+    padding-bottom: 10vh;
  }
 
  .intro{
@@ -676,7 +682,8 @@ html{
     margin-top: 20px;
     font-size: 15px;
     color: var(--six);  
-    text-align: left;         /*it engineer color */
+    text-align: left; 
+    width: auto;        /*it engineer color */
 }
 .a6{
    display: none;
@@ -685,7 +692,7 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 .a7 button {
     color: var(--seven);                                 /* button  color*/
@@ -717,51 +724,113 @@ html{
 
 
 
-.s{  
+.s1{  
     margin: auto;
-    font-size: 50px;
+    font-size: 35px;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 70px;
+    margin-bottom: 4vh;
     color: var(--third);                 /* skills project etc color*/
 }
 .box{
     display: none;
 }
-.box{
-    margin-top: 50px;
-    margin-bottom: 50px;
+skills{
+    display: none;
+}
+section{
+    display: none;
+}
+footer{
+    display: none;
+}
+ 
+.mobile{
+    display: block;
+}   
+.sk{display: block;}
+.mobcon1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 10vh; */
+    /* margin-left: 2vh;
+    margin-right: 2vh; */
+}
+
+.sk{
+    width: 10vh;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#skill-image1{
+    width: 40px;
+    
+}
+.skill-name{
+    text-align: center;
+}
+.mobile-line{
+    width: 35%;
+    height: 2px;
+    background-color:var(--1);    /* line color*/
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 4vh;
+    border-radius: 10px;
+}
+
+.projects-made{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.projects-display{
+    
+    background-color: var(--5);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid ;
+    border-radius: 3px;
+}
+.projects-heading{
+    text-align: center;
+    margin: 5px;
+}
+
+.projects-content{
+    margin: 5px;
+    font-size: 10px;
+    
+}
+.mobile-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.con{
-    display: none;
-}
-.con{
-    display: block;
-    width: 30%;
-    height: 16vh;
-    margin: 30px;
-    perspective: 1000px;
-    border-radius: 40px;
-    background-color:transparent;        /* animated box background color*/       
-}
-.footer-content {
-   display: none;               
-}
-.footer-content {
-    max-width: 80%;
-    margin: 0 auto;
+.mobile-first-row{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    color: rgb(0, 0, 0);               /* footer info color*/
+    margin: 5px;
+}
+.mobile-first-row input,textarea{
+    border: 2px solid ;
+    border-radius: 5px;
+    
+
 }
 
 
 
-}    
 
 
 
@@ -774,6 +843,10 @@ html{
 
 
 
+
+
+
+}
 
 
 
