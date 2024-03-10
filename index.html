@@ -220,102 +220,6 @@
 
     <!-- <div id="Contact" class="line2"></div> -->
 
-
-
-    <section>
-        <div class="contactme">
-            <div class="s">Contact Me</div>
-        </div>
-
-        <div class="contact-section">
-            <div class="address">
-
-
-                <form name="submit-to-google-sheet">
-                    <div class="upper-section">
-                        <input type="text" name="Name" placeholder="Name" required="required">
-                        <input type="email" name="Email" placeholder="Email" required="required"><br>
-                    </div>
-                    <div class="upper-section">
-                        <input type="tel" name="Mobile" placeholder="Mobile Number" required="required">
-                        <input type="text" name="Subject" placeholder="Subject" required="required"><br>
-                    </div>
-                    <textarea name="Message" placeholder="Enter Your Message Here..." id="" cols="30"
-                        rows="10"></textarea>
-                    <br><button type="submit">Send</button><br>
-                    <div id="msg"></div>
-
-                </form>
-
-            </div>
-        </div>
-        <script>const scriptURL = 'https://script.google.com/macros/s/AKfycbxgCUaDotppj3P8dnsgd2goUnN-AQZc27SiNu0d2T462IJ7_SJgR4xuU1AtgvcbqjyN/exec'
-            const form = document.forms['submit-to-google-sheet']
-            const msg = document.getElementById("msg")
-            form.addEventListener('submit', e => {
-                e.preventDefault()
-                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                    .then(response => {
-                        msg.innerHTML = "Message Sent Succesfully"
-                        setTimeout(function () {
-                            msg.innerHTML = ""
-                        }, 5000)
-                        form.reset()
-                    })
-                    .catch(error => console.error('Error!', error.message))
-            })</script>
-    </section>
-
-
-
-
-    <footer>
-        <div class="line1"></div>
-        <div class="footer-content">
-            <div class="contact-info">
-                <p>Email: <a href="mailto:adityamshimpi@gmail.com">adityamshimpi@gmail.com</a></p>
-                <p>Follow me: <a href="https://www.linkedin.com/in/adityashimpi22/">LinkedIn</a></p>
-            </div>
-            <div class="navigation-links">
-                <ul>
-                    <li><a href="https://www.instagram.com/the_knight_rider__/"><img src="images/instagram.png"
-                                alt=""></a></li>
-                    <li><a href="https://github.com/the-knight-rider"><img src="images/github.png" alt=""></a></li>
-                    <li><a href="https://wa.me/9158900465"><img src="images/whatsapp.png" alt=""></a></li>
-                </ul>
-            </div>
-            <div class="copyright">
-                <p>© 2024 Aditya Shimpi. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-    <script>
-        var dark = document.getElementById("dark");
-        dark.onclick = function () {
-            document.body.classList.toggle("dark-theme");
-            if (document.body.classList.contains("dark-theme")) {
-                dark.src = "images/light-mode.png";
-            } else {
-                dark.src = "images/night-mode.png";
-            }
-        }
-    </script>
-    <script>
-        var sidemeu = document.getElementById("sidemenu");
-        function openmenu() {
-            sidemeu.style.left = "0px";
-        }
-        function closemenu() {
-            sidemeu.style.left = "-200px";
-        }
-    </script>
-
-
-
-
-
-
-
     <div class="mobile">
         <div class="mobile-nav"></div>
         <div class="s1">Skills To Offer</div>
@@ -412,30 +316,115 @@
                 </div>
             </div>
         </div>
-        <div class="mobile-contacts">
-            <div class="mobile-line"> </div>
+
+    </div>
+    <div class="mobile-footer"></div>
+    </div>
+
+
+    <section>
+        <div class="contactme">
+            <div class="s">Contact Me</div>
             <div class="s1">Contact Me</div>
-            <div class="mobile-form">
-                <div class="mobile-first-row">
-                    <input type="text" name="Name" placeholder="Name" required="required">
-                    <input type="email" name="Email" placeholder="Email" required="required">
-                </div>
-                <div class="mobile-first-row">
-                    <input type="tel" name="Mobile" placeholder="Mobile Number" required="required">
-                    <input type="text" name="Subject" placeholder="Subject" required="required"><br>
-                </div>
-                <div class="mobile-first-row">
+        </div>
+
+        <div class="contact-section">
+            <div class="address">
+                <form name="submit-to-google-sheet" class="desktop-form">
+                    <div class="upper-section">
+                        <input type="text" name="Name" placeholder="Name" required="required">
+                        <input type="email" name="Email" placeholder="Email" required="required">
+                    </div>
+                    <div class="upper-section">
+                        <input type="tel" name="Mobile" placeholder="Mobile Number" required="required">
+                        <input type="text" name="Subject" placeholder="Subject" required="required">
+                    </div>
                     <textarea name="Message" placeholder="Enter Your Message Here..." id="" cols="30"
                         rows="10"></textarea>
-                </div>
-                <div class="mobile-first-row">
-                    <button type="submit">Send</button>
-                </div>
-            </div>
 
+                    <button type="submit">Send</button>
+                    <div id="msg"></div>
+
+                </form>
+
+            </div>
         </div>
-        <div class="mobile-footer"></div>
-    </div>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxgCUaDotppj3P8dnsgd2goUnN-AQZc27SiNu0d2T462IJ7_SJgR4xuU1AtgvcbqjyN/exec';
+
+            const formDesktop = document.forms['submit-to-google-sheet'];
+            const formMobile = document.forms['submit-to-google-sheet-mobile'];
+
+            function handleSubmit(form, msgId) {
+                const formMsg = document.getElementById(msgId);
+
+                form.addEventListener('submit', e => {
+                    e.preventDefault();
+                    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                        .then(response => {
+                            formMsg.innerHTML = "Message Sent Successfully";
+                            setTimeout(function () {
+                                formMsg.innerHTML = "";
+                            }, 5000);
+                            form.reset();
+                        })
+                        .catch(error => console.error('Error!', error.message));
+                });
+            }
+
+            handleSubmit(formDesktop, "msg");
+            handleSubmit(formMobile, "msg");
+        </script>
+
+    </section>
+
+
+
+
+    <footer>
+        <div class="line1"></div>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p>Email: <a href="mailto:adityamshimpi@gmail.com">adityamshimpi@gmail.com</a></p>
+                <p>Follow me: <a href="https://www.linkedin.com/in/adityashimpi22/">LinkedIn</a></p>
+            </div>
+            <div class="navigation-links">
+                <ul>
+                    <li><a href="https://www.instagram.com/the_knight_rider__/"><img src="images/instagram.png"
+                                alt=""></a></li>
+                    <li><a href="https://github.com/the-knight-rider"><img src="images/github.png" alt=""></a></li>
+                    <li><a href="https://wa.me/9158900465"><img src="images/whatsapp.png" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>© 2024 Aditya Shimpi. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var dark = document.getElementById("dark");
+        dark.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                dark.src = "images/light-mode.png";
+            } else {
+                dark.src = "images/night-mode.png";
+            }
+        }
+    </script>
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemeu.style.left = "0px";
+        }
+        function closemenu() {
+            sidemeu.style.left = "-200px";
+        }
+    </script>
+
+
+
+
 
 
 

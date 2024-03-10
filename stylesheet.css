@@ -432,7 +432,9 @@ li {
     margin-bottom: 100px;
     border-radius: 10px;   
 }
-
+.s1{
+    display: none;
+}
 .contact-section{
     padding-top: 50px;
     display: flex;
@@ -446,44 +448,39 @@ li {
     align-items: center;
     
 }
+.upper-section{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
 .address form input,.address form textarea,.address form button{
     margin: 5px;
+    
     border-radius: 5px;
-    color: var(--3);               /* input form text color*/ 
-    border-color: var(--6);               /* input form border color*/ 
-    background-color: transparent;    /* form background color*/
+    color: var(--3);               
+    border-color: var(--6);               
+    background-color: transparent;   
     resize: none;
 }
 .address form button{
     width: 40% ;
-    background-color: var(--8);      /* form button background color*/
+    background-color: var(--8);     
     border-radius: 5px;
     margin: auto;
     width: 100px;
     height: 40px;
     font-size: 16px;                
     cursor: pointer;
-    border-color: var(--9);          /* send form button border color*/ 
-    color: var(--seven);                     /* send form button text color*/      
+    border-color: var(--9);         
+    color: var(--seven);                     
 }
-/* input::placeholder {
-    color: #d61010; } */
-    
-    /* form place holder color */
 
 .address form textarea{
     width: 98%;
     font-size: 14px; 
-    color: rgb(0, 0, 0);     /* form messsage input textarea color*/      
+    color: rgb(0, 0, 0);    
 }
 
-.upper-section input{
-    height: 40px;
-    width: 40vh;
-    font-size: 14px;
-    margin:auto;
-    text-align:start;
-}
 
 #msg{
     color: var(--3);           /* form messsage 5 sec color*/
@@ -738,9 +735,9 @@ html{
 skills{
     display: none;
 }
-section{
+/* section{
     display: none;
-}
+} */
 footer{
     display: none;
 }
@@ -810,31 +807,58 @@ footer{
     font-size: 10px;
     
 }
-.mobile-form{
+
+
+.s{
+    display: none;
+}
+.s1{
+    display: block;
+}
+.contact-section{
+    /* padding-top: 50px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.address form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.mobile-first-row{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-}
-.mobile-first-row input,textarea{
-    border: 2px solid ;
-    border-radius: 5px;
     
-
+}
+.upper-section{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.address form input,.address form textarea,.address form button{
+    margin: 3px;
+    border-radius: 3px;
+    color: var(--3);               
+    border-color: var(--6);               
+    background-color: transparent;   
+    resize: none;
+}
+.address form button{
+    width: 10vh ;
+    background-color: var(--8);     
+    border-radius: 5px;
+    margin: auto;
+    font-size: 15px;                
+    cursor: pointer;
+    border-color: var(--9);         
+    color: var(--seven);                     
 }
 
-
-
-
-
-
-
+.address form textarea{
+    width: 96%;
+    font-size: 14px; 
+    color: rgb(0, 0, 0);    
+}
 
 
 
