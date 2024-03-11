@@ -950,8 +950,13 @@ text-decoration: none;
     height: 6vh;
     
 }
-
-
+.mobile-copyright{
+    font-size: 15px;
+    display: block;
+}
+.mobile-footer-social-second{
+    font-size:10px ;
+}
 
 
 }
