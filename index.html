@@ -38,7 +38,7 @@
         <div class="orignal-showcase-nav">
             <h2>Original Showcase</h2>
         </div>
-        <div id="dark" class="dark" class="mobile-nav-darkmode"><img id="dark" src="images/night-mode.png"></div>
+        <div id="dark1" class="dark1" class="mobile-nav-darkmode"><img id="dark-mobile" src="images/night-mode.png"></div>
     </div>
     <div id="sidemenu" class="navm">
         <span class="menu" onclick="closemenu()"><img src="images/close.png" alt=""></span>
@@ -432,6 +432,11 @@
             }
         }
     </script>
+    
+    
+    
+    
+    
     <script>
         var sidemeu = document.getElementById("sidemenu");
         function openmenu() {
@@ -460,17 +465,21 @@
             sidemeu.style.left = "-200px";
         }
     </script>
-    <script>
-        var dark = document.getElementById("dark");
-        dark.onclick = function () {
-            document.body.classList.toggle("dark-theme");
-            if (document.body.classList.contains("dark-theme")) {
-                dark.src = "images/light-mode.png";
-            } else {
-                dark.src = "images/night-mode.png";
-            }
+
+
+
+<script>
+    var darkMobile = document.getElementById("dark-mobile");
+    darkMobile.onclick = function () {
+        document.body.classList.toggle("dark-theme1");
+        if (document.body.classList.contains("dark-theme1")) {
+            darkMobile.src = "images/light-mode.png";
+        } else {
+            darkMobile.src = "images/night-mode.png";
         }
-    </script>
+    }
+</script>
+
 
 
 
