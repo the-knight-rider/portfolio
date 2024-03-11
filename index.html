@@ -38,7 +38,8 @@
         <div class="orignal-showcase-nav">
             <h2>Original Showcase</h2>
         </div>
-        <div id="dark1" class="dark1" class="mobile-nav-darkmode"><img id="dark-mobile" src="images/night-mode.png"></div>
+        <div id="dark1" class="dark1" class="mobile-nav-darkmode"><img id="dark-mobile" src="images/night-mode.png">
+        </div>
     </div>
     <div id="sidemenu" class="navm">
         <span class="menu" onclick="closemenu()"><img src="images/close.png" alt=""></span>
@@ -47,13 +48,13 @@
             <br>
             <li><a href="#Introduction">Introduction</a></li>
             <li><a href="#Skills">Skills</a></li>
-            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#mob-projects">Projects</a></li>
             <li><a href="#">Certifications</a></li>
             <!-- <li>Internships</li>
             <li>Hackathons</li>
             <li>Extracurricular Activities</li> -->
             <li><a href="">Guides</a></li>
-            <li><a href="#Contact">Contact</a></li>
+            <li><a href="#mob-contact">Contact</a></li>
             <!-- <img id="dark" src="images/night-mode.png" > -->
         </ul>
     </div>
@@ -277,8 +278,8 @@
                 </div>
             </div>
         </div>
-        <div class="mobile-line"> </div>
-        <div class="mobile-projects">
+        <div class="mobile-line" id="mob-projects"> </div>
+        <div class="mobile-projects" >
             <div class="s1">Projects</div>
             <div class="projects-made">
                 <div class="projects-display">
@@ -323,7 +324,7 @@
 
     <section>
         <div class="contactme">
-            <div class="mobile-line"> </div>
+            <div class="mobile-line" id="mob-contact"> </div>
             <div class="s">Contact Me</div>
             <div class="s1">Contact Me</div>
         </div>
@@ -381,23 +382,70 @@
         <div class="mobile-line-footer"> </div>
         <div class="mobile-footer">
             <div class="mobile-contact-info">
-                 <a1 href="mailto:adityamshimpi@gmail.com">Email</a1>
-                 <a1 href="https://www.linkedin.com/in/adityashimpi22/">LinkedIn</a1>
+                <div class="mobile-footer-social">
+                    <div class="mobile-footer-social-first">
+                        <a href="mailto:adityamshimpi@gmail.com"><img src="images/gmail.png" alt=""> </a>
+                    </div>
+                    <div class="mobile-footer-social-second">
+                        <a href="mailto:adityamshimpi@gmail.com">Email</a>
+                    </div>
+                </div>
+                <div class="mobile-footer-social">
+                    <div class="mobile-footer-social-first">
+                        <a href="https://www.linkedin.com/in/adityashimpi22/"><img src="images/linkedin.png" alt=""> </a>
+                    </div>
+                    <div class="mobile-footer-social-second">
+                        <a href="https://www.linkedin.com/in/adityashimpi22/">LinkedIn</a>
+                    </div>
+                </div>
             </div>
-            <div class="mobie-social">
-                <ul>
-                    <li><a1 href="https://www.instagram.com/the_knight_rider__/"><img src="images/instagram.png"
-                                alt=""></a1></li>
-                    <li><a1 href="https://github.com/the-knight-rider"><img src="images/github.png" alt=""></a1></li>
-                    <li><a1 href="https://wa.me/9158900465"><img src="images/whatsapp.png" alt=""></a1></li>
-                </ul>
-            </div>
-            <div class="mobile-copyright">
-                © 2024 Aditya Shimpi. All Rights Reserved.
+            <div class="up-button-footer"><a href="#Introduction"><img src="images/up-arrow.png" alt=""></a></div>
+            <div class="mobile-contact-info">
+                <div class="mobile-footer-social">
+                    <div class="mobile-footer-social-first">
+                        <a href="https://www.instagram.com/the_knight_rider__/"><img src="images/instagram.png" alt=""> </a>
+                    </div>
+                    <div class="mobile-footer-social-second">
+                        <a href="https://www.instagram.com/the_knight_rider__/">Instagram</a>
+                    </div>
+                </div>
+                <div class="mobile-footer-social">
+                    <div class="mobile-footer-social-first">
+                        <a href="https://github.com/the-knight-rider"><img src="images/github.png" alt=""> </a>
+                    </div>
+                    <div class="mobile-footer-social-second">
+                        <a href="https://github.com/the-knight-rider">GitHub</a>
+                    </div>
+                </div>
+                <div class="mobile-footer-social">
+                    <div class="mobile-footer-social-first">
+                        <a href="https://wa.me/9158900465"><img src="images/whatsapp.png" alt=""> </a>
+                    </div>
+                    <div class="mobile-footer-social-second">
+                        <a href="https://wa.me/9158900465">Whatsapp</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <!-- <div class="mobie-social">
+        <div class="mobile-social-links"><a href=""><img
+                    src="" alt=""></a></div>
+
+        <div class="mobile-social-links"><a href=""><img src=""
+                    alt=""></a> </div>
+        <div class="mobile-social-links"><a href=""><img src=""
+                    alt=""></a></div> -->
     </div>
+
+
+    </div>
+    <div class="mobile-copyright">
+        © 2024 Aditya Shimpi. All Rights Reserved.
+    </div>
+    <br>
+    </div>
+
 
 
 
@@ -432,11 +480,11 @@
             }
         }
     </script>
-    
-    
-    
-    
-    
+
+
+
+
+
     <script>
         var sidemeu = document.getElementById("sidemenu");
         function openmenu() {
@@ -468,17 +516,17 @@
 
 
 
-<script>
-    var darkMobile = document.getElementById("dark-mobile");
-    darkMobile.onclick = function () {
-        document.body.classList.toggle("dark-theme1");
-        if (document.body.classList.contains("dark-theme1")) {
-            darkMobile.src = "images/light-mode.png";
-        } else {
-            darkMobile.src = "images/night-mode.png";
+    <script>
+        var darkMobile = document.getElementById("dark-mobile");
+        darkMobile.onclick = function () {
+            document.body.classList.toggle("dark-theme1");
+            if (document.body.classList.contains("dark-theme1")) {
+                darkMobile.src = "images/light-mode.png";
+            } else {
+                darkMobile.src = "images/night-mode.png";
+            }
         }
-    }
-</script>
+    </script>
 
 
 

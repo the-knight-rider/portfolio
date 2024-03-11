@@ -26,7 +26,7 @@ body {
     --3:rgb(0, 0, 0);
     --4:rgb(0, 0, 0);
     --5:#f2eaeab8;
-    --6:rgb(0, 0, 0);
+    --6:rgb(114, 111, 111);
     --7:white;
     --8:transparent;
     --9:#000000;
@@ -482,7 +482,7 @@ li {
 .address form textarea{
     width: 98%;
     font-size: 14px; 
-    color: rgb(0, 0, 0);    
+    color: var(--3);   
 }
 
 
@@ -513,7 +513,9 @@ html{
     display: none;
 }
 
-
+.mobile-copyright{
+    display: none;
+}
 
 @media only screen and (max-width: 600px){
     :root{
@@ -529,12 +531,14 @@ html{
         --2:rgb(0, 0, 0);
         --3:rgb(0, 0, 0);
         --4:rgb(0, 0, 0);
-        --5:#f2eaeab8;
+        --5:#a29e9eb8;
         --6:rgb(0, 0, 0);
         --7:white;
         --8:transparent;
         --9:#000000;  
-        --10:#ffffff
+        --10:#ffffff;
+        --11:rgba(66, 66, 66, 0.879);
+
 
     }
     .dark-theme1{
@@ -556,6 +560,7 @@ html{
         --8:transparent;
         --9:#e60c0c;
         --10:#c5c0c0eb;
+        --11:rgb(157, 154, 154);
     }
     .mobile-navup-fixed{
         position: fixed;
@@ -776,6 +781,7 @@ footer{
 
 #skill-image1{
     width: 40px;
+    height: 40px;
     
 }
 .skill-name{
@@ -816,7 +822,7 @@ footer{
 .projects-content{
     margin: 5px;
     font-size: 10px;
-    color: rgb(185, 182, 185);
+    color: var(--11);
     
 }
 
@@ -863,6 +869,7 @@ footer{
 }
 .address form textarea{
     height:15vh;
+   
 }
 .address form button{
     width: 10vh ;
@@ -879,7 +886,7 @@ footer{
 .address form textarea{
     width: 96%;
     font-size: 14px; 
-    color: rgb(0, 0, 0);    
+    color: var(--3);    
 }
 
 
@@ -898,9 +905,54 @@ width: 100%;
 }
 .mobile-footer{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+}
+
+.mobile-copyright{
+    text-align:center;
+    margin-top: 10px;
+}
+
+
+.mobile-contact-info{
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
+
+.mobile-contact-info a{
+    color: #000000;
+    margin: 5px;
+}
+.mobie-social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mobile-social-links a,img{
+    height: 2vh;
+    color: #000000;
+    margin: 3px;
+}
+.mobile-footer-social{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.mobile-footer-social a{
+color: var(--third);
+text-decoration: none;
+}
+
+.up-button-footer img{
+    height: 6vh;
+    
+}
+
+
+
 
 }
 
