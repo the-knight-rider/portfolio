@@ -583,11 +583,13 @@ html{
     }
     .orignal-showcase-nav h2{
         margin: 10px;
-        /* position: ; */
+        font-size: 5px;
+       
         z-index: 3;
         color:var(--10);
         font-size: 25px;
         margin-left: 4.5vh;
+        text-align: center;
     }
     #dark1 img{
         height: 6vh;
