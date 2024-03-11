@@ -460,6 +460,11 @@ li {
     border-color: var(--6);               
     background-color: transparent;   
     resize: none;
+    width: 30vh;
+    height:4vh;
+}
+.address form textarea{
+    height:30vh;
 }
 .address form button{
     width: 40% ;
@@ -817,22 +822,26 @@ footer{
 .contact-section{
     padding-top: 0px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    margin-left: 20vh;
+    margin-right: 20vh;
     
 }
 
 .address form{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:space-around;
     align-items: center;
+    
     
 }
 .upper-section{
     display: flex;
-    justify-content:center;
+    justify-content:space-around;
     align-items: center;
+    
 }
 .address form input,.address form textarea,.address form button{
     margin: 3px;
@@ -841,6 +850,11 @@ footer{
     border-color: var(--6);               
     background-color: transparent;   
     resize: none;
+    width: 13vh;
+    height: 2vh;
+}
+.address form textarea{
+    height:15vh;
 }
 .address form button{
     width: 10vh ;
@@ -850,7 +864,8 @@ footer{
     font-size: 15px;                
     cursor: pointer;
     border-color: var(--9);         
-    color: var(--seven);                     
+    color: var(--seven);  
+    height: 3vh;                   
 }
 
 .address form textarea{
