@@ -562,6 +562,11 @@ html{
         --10:#c5c0c0eb;
         --11:rgb(157, 154, 154);
     }
+    .pc-projects{
+        display: none;
+    }
+    .line2{display: none;}
+    
     .mobile-navup-fixed{
         position: fixed;
         display: flex;
@@ -883,7 +888,7 @@ footer{
 }
 
 .address form textarea{
-    width: 96%;
+    width: 92%;
     font-size: 14px; 
     color: var(--3);    
 }
