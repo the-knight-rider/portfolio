@@ -1,545 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio-Aditya </title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <script src="script.js"></script>
-
-    <style>
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditya Shimpi | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="nav">
-        <div class="navl">
-            <h2>Original Showcase</h2>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Aditya Shimpi</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle" aria-label="Open menu" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode" tabindex="0">
+        <span id="themeIcon">🌙</span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-container">
+        <div class="hero-image">
+          <img src="images/photo.jpeg" alt="Aditya Shimpi profile photo" class="profile-photo">
         </div>
-        <div class="navr">
-            <ul>
-                <li><a href="#Introduction">Introduction</a></li>
-                <li><a href="#Skills">Skills</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#">Certifications</a></li>
-                <!-- <li>Internships</li>
-                <li>Hackathons</li>
-                <li>Extracurricular Activities</li> -->
-                <li><a href="">Guides</a></li>
-                <li><a href="#Contact">Contact</a></li>
-                <img id="dark" src="images/night-mode.png">
-            </ul>
-        </div>
-    </div>
-    <div class="mobile-navup-fixed">
-        <span id="menu1" class="menu1" onclick="openmenu()"><img src="images/menu-bar.png" alt=""></span>
-        <div class="orignal-showcase-nav">
-            Original Showcase
-        </div>
-        <div id="dark1" class="dark1" class="mobile-nav-darkmode"><img id="dark-mobile" src="images/night-mode.png">
-        </div>
-    </div>
-    <div id="sidemenu" class="navm">
-        <span class="menu" onclick="closemenu()"><img src="images/close.png" alt=""></span>
-        <ul>
-            <br>
-            <br>
-            <li><a href="#Introduction">Introduction</a></li>
-            <li><a href="#Skills">Skills</a></li>
-            <li><a href="#mob-projects">Projects</a></li>
-            <li><a href="#Introduction">Certifications</a></li>
-            <!-- <li>Internships</li>
-            <li>Hackathons</li>
-            <li>Extracurricular Activities</li> -->
-            <li><a href="#Introduction">Guides</a></li>
-            <li><a href="#mob-contact">Contact</a></li>
-            <!-- <img id="dark" src="images/night-mode.png" > -->
-        </ul>
-    </div>
-    <main>
-
-        <!-- <div class="back"></div> -->
-        <div id="Introduction" class="intro">
-            <div id="photo"><img src="images/photo.jpg" alt="Image" width="300" height="auto"></div>
-            <div class="about">
-                <div class="a1">Hi, I'm Aditya Shimpi</div>
-                <div class="a2">Passionate about Work</div>
-                <div class="a3">An IT Engineer pursuing B.Tech in Information Technology with Honour in Artificial
-                    Intelligence and Machine Learning. <br>Passionate about problem solving and technical
-                    develpoments. <br> Dedicated to crafting impactful solutions that inspire and elevate. <br>Let's
-                    connect, collaborate and unleash our potential to bring ideas to life!</div>
-                <div class="a6">
-                    <div class="a4">
-                        <button><a href="https://drive.google.com/file/d/1_Dw22j88k2jQrFeyW6FQ-Kd8sQtiPkzo/view?usp=drive_link">Resume</a></button>
-                    </div>
-                    <div class="a5"><button><a href="#Contact">Let's Talk</a></button></div>
-                </div>
-            </div>
-            <div class="a7">
-                <div class="a4"><a href="https://drive.google.com/file/d/1_Dw22j88k2jQrFeyW6FQ-Kd8sQtiPkzo/view?usp=drive_link">
-                    <button>Resume</button>
-                </a>
-            
-                    <!-- <button>Resume</button> -->
-                </div>
-                
-                <div class="a5">
-                    <a href="#mob-contact">
-                    <button>Let's Talk</button></div>
-                </a>
+        <div class="hero-content">
+          <h1>Hi, I'm <span>Aditya Shimpi</span></h1>
+          <h2 class="hero-subheading">Passionate about Work</h2>
+          <p>An IT Engineer pursuing B.Tech in Information Technology with Honour in Artificial Intelligence and Machine Learning.<br>
+          Passionate about problem solving and technical developments.<br>
+          Dedicated to crafting impactful solutions that inspire and elevate.<br>
+          Let's connect, collaborate and unleash our potential to bring ideas to life!</p>
+          <div class="hero-buttons">
+            <a href="https://drive.google.com/file/d/1YXYge-YOQJB2KnLOed2w9dV0jTOVw37-/view" class="btn" target="_blank" rel="noopener">📄 Download Resume</a>
+            <a href="#contact" class="btn btn-secondary">📧 Contact Me</a>
             </div>
         </div>
-    </main>
-
-
-
-    <div id="Skills" class="line"> </div>
-    <skills>
-        <div class="s">Skills To Offer</div>
-        <div class="box">
-            <div class="con">
-                <div class="card">
-                    <div class="front">
-                        <div class="b11"><img id="a2" src="images/python.png" alt=""></div>
-                        <div class="b12">Python</div>
-                    </div>
-                    <!-- <div class="back1">
-                       <div class="bac">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aperiam, quo quos sit
-                        non fuga.</div> 
-                    </div> -->
-                </div>
-            </div>
-            <div class="con">
-                <div class="card">
-                    <div class="front">
-                        <div class="b11"><img id="a2" src="images/c-.png" alt=""></div>
-                        <div class="b12">C++</div>
-                    </div>
-                    <div class="back1">
-                        <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aperiam, quo quos sit
-                        non fuga. -->
-                    </div>
-
-                </div>
-            </div>
-            <div class="con">
-                <div class="card">
-                    <div class="front">
-                        <div class="b11"><img id="a2" src="images/java.png" alt=""></div>
-                        <div class="b12">Java</div>
-                    </div>
-                    <div class="back1">
-                        <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aperiam, quo quos sit
-                        non fuga. -->
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-
-
-
-
-
-        <div class="box">
-
-
-            <div class="con">
-                <div class="card">
-                    <div class="front">
-                        <div class="b11"><img id="a2" src="images/server.png" alt=""></div>
-                        <div class="b12">Cloud Computing</div>
-                    </div>
-                    <!-- <div class="back1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aperiam, quo quos sit
-                        non fuga.
-                    </div> -->
-
-                </div>
-            </div>
-
-            <div class="con">
-                <div class="card">
-                    <div class="front">
-                        <div class="b11"><img id="a2" src="images/hypothesis.png" alt=""></div>
-                        <div class="b12">Problem Solving</div>
-                    </div>
-                    <div class="back1">
-                        <!-- <div id="t1">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aperiam, quo quos sit
-                            non fuga.</div> -->
-                    </div>
-
-                </div>
-            </div>
-            <div class="con">
-                <div class="card">
-                    <div class="front">
-                        <div class="b11"><img id="a2" src="images/database.png" alt=""></div>
-                        <div class="b12">DBMS</div>
-                    </div>
-                    <div class="back1">
-                        <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aperiam, quo quos sit
-                        non fuga. -->
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-    </skills>
-    <div id="Projects" class="line"> </div>
-    <projects class="pc-projects">
-        <div  class="s">Projects</div>
-        <div class="p1">
-            <div class="p2" id="c1">
-                <div class="c0"></div>
-                <div class="c11">NewzIn</div>
-                <div class="c12">An interactive platform leveraging advanced language processing to summarize user based
-                    queries, focusing on relevance of suggestions and interface usability as primary evaluation
-                    criteria.</div>
-                <div class="c4"><button><img src="images/expand-arrows.png" alt=""></button></div>
-            </div>
-            <div class="p2" id="c2">
-                <div class="c6"></div>
-                <div class="c11">Monkey Mania</div>
-                <div class="c12"> A 2D platformer featuring challenges for the user to guide the subject through
-                    obstacles and climb walls, whilst collecting power ups to win at the end of all levels of climbing
-                    elevation.
-                </div>
-                <div class="c4"><button><img src="images/expand-arrows.png" alt=""></button></div>
-            </div>
-            <div class="p2" id="c3">
-                <div class="c11">Androida</div>
-                <div class="c12">An application leveraging Google Maps API to enable users to access their
-                    real-time/live location and explore their neighborhood along with other relevant and necessary
-                    sites.</div>
-                <div class="c4"><button><img src="images/expand-arrows.png" alt=""></button></div>
-            </div>
-        </div>
-    </projects>
-
-
-
-    <div id="Contact" class="line2"></div>
-
-    <div class="mobile">
-        <div class="mobile-nav"></div>
-        <div class="s1">Skills To Offer</div>
-        <div class="mobile-skills">
-            <div class="mobcon1">
-                <div class="sk">
-                    <div class="skill-image">
-                        <img id="skill-image1" src="images/python.png" alt="">
-                    </div>
-                    <div class="skill-name">
-                        Python
-                    </div>
-                </div>
-                <div class="sk">
-                    <div class="skill-image">
-                        <img id="skill-image1" src="images/c-.png" alt="">
-                    </div>
-                    <div class="skill-name">
-                        C++
-                    </div>
-                </div>
-                <div class="sk">
-                    <div class="skill-image">
-                        <img id="skill-image1" src="images/java.png" alt="">
-                    </div>
-                    <div class="skill-name">
-                        Java
-                    </div>
-                </div>
-            </div>
-            <div class="mobcon1">
-                <div class="sk">
-                    <div class="skill-image">
-                        <img id="skill-image1" src="images/hypothesis.png" alt="">
-                    </div>
-                    <div class="skill-name">
-                        Problem Solving
-                    </div>
-                </div>
-                <div class="sk">
-                    <div class="skill-image">
-                        <img id="skill-image1" src="images/server.png" alt="">
-                    </div>
-                    <div class="skill-name">
-                        DBMS
-                    </div>
-                </div>
-                <div class="sk">
-                    <div class="skill-image">
-                        <img id="skill-image1" src="images/database.png" alt="">
-                    </div>
-                    <div class="skill-name">
-                        Cloud Computing
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="mobile-line" id="mob-projects"> </div>
-        <div class="mobile-projects" >
-            <div class="s1">Projects</div>
-            <div class="projects-made">
-                <div class="projects-display">
-                    <div class="projects-heading">
-                        NewzInn
-                    </div>
-                    <div class="projects-content">
-                        An interactive platform leveraging advanced language processing to summarize user based
-                        queries, focusing on relevance of suggestions and interface usability as primary evaluation
-                        criteria.
-                    </div>
-                </div>
-                <div class="projects-display">
-                    <div class="projects-heading">
-                        Monkey Mania
-                    </div>
-                    <div class="projects-content">
-                        A 2D platformer featuring challenges for the user to guide the subject through
-                        obstacles and climb walls, whilst collecting power ups to win at the end of all levels of
-                        climbing
-                        elevation.
-                    </div>
-
-                </div>
-                <div class="projects-display">
-                    <div class="projects-heading">
-                        Androida
-                    </div>
-                    <div class="projects-content">
-                        An application leveraging Google Maps API to enable users to access their
-                        real-time/live location and explore their neighborhood along with other relevant and necessary
-                        sites.
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-
-
-    <section>
-        <div class="contactme">
-            <div class="mobile-line" id="mob-contact"> </div>
-            <div class="s">Contact Me</div>
-            <div class="s1">Contact Me</div>
-        </div>
-
-        <div class="contact-section">
-            <div class="address">
-                <form name="submit-to-google-sheet" class="desktop-form">
-                    <div class="upper-section">
-                        <input type="text" name="Name" placeholder="Name" required="required">
-                        <input type="email" name="Email" placeholder="Email" required="required">
-                    </div>
-                    <div class="upper-section">
-                        <input type="tel" name="Mobile" placeholder="Mobile Number" required="required">
-                        <input type="text" name="Subject" placeholder="Subject" required="required">
-                    </div>
-                    <textarea name="Message" placeholder="Enter Your Message Here..." id="" cols="30"
-                        rows="10"></textarea>
-
-                    <button type="submit">Send</button>
-                    <div id="msg"></div>
-
-                </form>
-
-            </div>
-        </div>
-        <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbxgCUaDotppj3P8dnsgd2goUnN-AQZc27SiNu0d2T462IJ7_SJgR4xuU1AtgvcbqjyN/exec';
-
-            const formDesktop = document.forms['submit-to-google-sheet'];
-            const formMobile = document.forms['submit-to-google-sheet-mobile'];
-
-            function handleSubmit(form, msgId) {
-                const formMsg = document.getElementById(msgId);
-
-                form.addEventListener('submit', e => {
-                    e.preventDefault();
-                    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                        .then(response => {
-                            formMsg.innerHTML = "Message Sent Successfully";
-                            setTimeout(function () {
-                                formMsg.innerHTML = "";
-                            }, 5000);
-                            form.reset();
-                        })
-                        .catch(error => console.error('Error!', error.message));
-                });
-            }
-
-            handleSubmit(formDesktop, "msg");
-            handleSubmit(formMobile, "msg");
-        </script>
-
+      </div>
     </section>
-    <div class="mobile">
-        <div class="mobile-line-footer"> </div>
-        <div class="mobile-footer">
-            <div class="mobile-contact-info">
-                <div class="mobile-footer-social">
-                    <div class="mobile-footer-social-first">
-                        <a href="mailto:adityamshimpi@gmail.com"><img src="images/gmail.png" alt=""> </a>
-                    </div>
-                    <div class="mobile-footer-social-second">
-                        <a href="mailto:adityamshimpi@gmail.com">Email</a>
-                    </div>
-                </div>
-                <div class="mobile-footer-social">
-                    <div class="mobile-footer-social-first">
-                        <a href="https://www.linkedin.com/in/adityashimpi22/"><img src="images/linkedin.png" alt=""> </a>
-                    </div>
-                    <div class="mobile-footer-social-second">
-                        <a href="https://www.linkedin.com/in/adityashimpi22/">LinkedIn</a>
-                    </div>
-                </div>
-            </div>
-            <div class="up-button-footer"><a href="#Introduction"><img src="images/up-arrow.png" alt=""></a></div>
-            <div class="mobile-contact-info">
-                <div class="mobile-footer-social">
-                    <div class="mobile-footer-social-first">
-                        <a href="https://www.instagram.com/the_knight_rider__/"><img src="images/instagram.png" alt=""> </a>
-                    </div>
-                    <div class="mobile-footer-social-second">
-                        <a href="https://www.instagram.com/the_knight_rider__/">Instagram</a>
-                    </div>
-                </div>
-                <div class="mobile-footer-social">
-                    <div class="mobile-footer-social-first">
-                        <a href="https://github.com/the-knight-rider"><img src="images/github.png" alt=""> </a>
-                    </div>
-                    <div class="mobile-footer-social-second">
-                        <a href="https://github.com/the-knight-rider">GitHub</a>
-                    </div>
-                </div>
-                <div class="mobile-footer-social">
-                    <div class="mobile-footer-social-first">
-                        <a href="https://wa.me/9158900465"><img src="images/whatsapp.png" alt=""> </a>
-                    </div>
-                    <div class="mobile-footer-social-second">
-                        <a href="https://wa.me/9158900465">Whatsapp</a>
-                    </div>
-                </div>
-            </div>
+    <section class="about" id="about">
+      <h2>About Me</h2>
+      <p>An ambitious and optimistic individual seeking a professional environment to harness my skills, collaborate with peers, and grow my knowledge. Currently pursuing IT Engineering with honors in AI & ML, I’m passionate about creating impactful software solutions and continuously enhancing my expertise. I work with an Agile approach, focusing on collaboration, adaptability, and delivering quality outcomes.</p>
+    </section>
+    <section class="skills" id="skills">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <p>Proficient in various programming languages essential for diverse development needs.</p>
+          <div class="skill-cards-container">
+            <div class="skill-card-item">Python</div>
+            <div class="skill-card-item">Java</div>
+            <div class="skill-card-item">JavaScript</div>
+            <div class="skill-card-item">C/C++</div>
+            <div class="skill-card-item">SQL</div>
+            <div class="skill-card-item">HTML/CSS</div>
+          </div>
         </div>
-    </div>
-    <!-- <div class="mobie-social">
-        <div class="mobile-social-links"><a href=""><img
-                    src="" alt=""></a></div>
-
-        <div class="mobile-social-links"><a href=""><img src=""
-                    alt=""></a> </div>
-        <div class="mobile-social-links"><a href=""><img src=""
-                    alt=""></a></div> -->
-    </div>
-
-
-    </div>
-    <div class="mobile-copyright">
-        © 2024 Aditya Shimpi. All Rights Reserved.
-    </div>
-    <br>
-    </div>
-
-
-
-
-    <footer>
-        <div class="line1"></div>
-        <div class="footer-content">
-            <div class="contact-info">
-                <p>Email: <a href="mailto:adityamshimpi@gmail.com">adityamshimpi@gmail.com</a></p>
-                <p>Follow me: <a href="https://www.linkedin.com/in/adityashimpi22/">LinkedIn</a></p>
-            </div>
-            <div class="navigation-links">
-                <ul>
-                    <li><a href="https://www.instagram.com/the_knight_rider__/"><img src="images/instagram.png"
-                                alt=""></a></li>
-                    <li><a href="https://github.com/the-knight-rider"><img src="images/github.png" alt=""></a></li>
-                    <li><a href="https://wa.me/9158900465"><img src="images/whatsapp.png" alt=""></a></li>
-                </ul>
-            </div>
-            <div class="copyright">
-                <p>© 2024 Aditya Shimpi. All Rights Reserved.</p>
-            </div>
+        <div class="skill-group">
+          <h3>Tools & Platforms</h3>
+          <p>Experienced with industry-standard development tools and cloud platforms.</p>
+          <div class="skill-cards-container">
+            <div class="skill-card-item">VS Code</div>
+            <div class="skill-card-item">Git/GitHub</div>
+            <div class="skill-card-item">Python IDLE</div>
+            <div class="skill-card-item">Codeblocks</div>
+            <div class="skill-card-item">GCCP</div>
+            <div class="skill-card-item">Android Studio</div>
+            <div class="skill-card-item">Jupyter Notebook</div>
+          </div>
         </div>
-    </footer>
-    <script>
-        var dark = document.getElementById("dark");
-        dark.onclick = function () {
-            document.body.classList.toggle("dark-theme");
-            if (document.body.classList.contains("dark-theme")) {
-                dark.src = "images/light-mode.png";
-            } else {
-                dark.src = "images/night-mode.png";
-            }
-        }
-    </script>
+        <div class="skill-group">
+          <h3>AI/ML & Cloud</h3>
+          <p>Specialized in AI/ML model development and cloud infrastructure management.</p>
+          <div class="skill-cards-container">
+            <div class="skill-card-item">MobileBERT</div>
+            <div class="skill-card-item">TensorFlow</div>
+            <div class="skill-card-item">GCP AI/ML APIs</div>
+            <div class="skill-card-item">Scikit-learn</div>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Soft Skills</h3>
+          <p>Key interpersonal and professional attributes for effective collaboration and leadership.</p>
+          <div class="skill-cards-container">
+            <div class="skill-card-item">Leadership</div>
+            <div class="skill-card-item">Communication</div>
+            <div class="skill-card-item">Agile Methodology</div>
+            <div class="skill-card-item">Teamwork</div>
+            <div class="skill-card-item">Adaptability</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="projects" id="projects">
+      <h2>Projects</h2>
+      <div class="project-list">
+        <div class="project-card">
+          <img src="images/learnsphere.jpg" alt="LearnSphere Project Image">
+          <div class="project-content">
+            <h3>LearnSphere</h3>
+            <p>AI-powered education app for personalized learning and progress tracking.</p>
+            <div class="project-meta">Tech: Flutter, Firebase, Python, MobileBERT</div>
+            <div class="project-links">
+              <a href="https://drive.google.com/file/d/10bGSOR8Ij4_fdVCD5XRm6ENikNJ-GCr-/view?usp=sharing" target="_blank" rel="noopener" class="btn-project-demo">Live Demo</a>
+              <a href="https://github.com/adityamshimpi/LearnSphere" target="_blank" rel="noopener" class="btn-project-github">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/hrms.png" alt="NewzIn Project Image">
+          <div class="project-content">
+            <h3>NexGen Nexus</h3>
+            <p>Developed an HRMS platform, designed to streamline HR and employee management processes.</p>
+            <div class="project-meta">Tech: React, Node.js, Express, Python, Tailwind</div>
+            <div class="project-links">
+              <a href="https://hrms-liart.vercel.app/" target="_blank" rel="noopener" class="btn-project-demo">Live Demo</a>
+              <a href="https://github.com/adityamshimpi/NewzIn" target="_blank" rel="noopener" class="btn-project-github">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/travell.png" alt="BagGlam Project Image">
+          <div class="project-content">
+            <h3>Travel Agency Website </h3>
+            <p> A responsive website for a travel agency, featuring destination guides, tour packages, and booking forms.</p>
+            <div class="project-meta">Tech: HTML, CSS, JavaScript</div>
+            <div class="project-links">
+              <a href="https://travel-agency-seven-phi.vercel.app/" target="_blank" rel="noopener" class="btn-project-demo">Live Demo</a>
+              <a href="https://github.com/adityamshimpi/BagGlam" target="_blank" rel="noopener" class="btn-project-github">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/baglam.png" alt="NexGen Nexus Project Image">
+          <div class="project-content">
+            <h3>BagGlam</h3>
+            <p> Developed a modern e-commerce website for a bag store, featuring a user-friendly interface and responsive design. </p>
+            <div class="project-meta">Tech: HTML, CSS, Java, JQuery, React</div>
+            <div class="project-links">
+              <a href="https://bag-glam2.vercel.app/" target="_blank" rel="noopener" class="btn-project-demo">Live Demo</a>
+              <a href="https://github.com/adityamshimpi/NexGen-Nexus" target="_blank" rel="noopener" class="btn-project-github">GitHub</a>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="project-card">
+          <img src="images/reviews.png" alt="QuizQuest Project Image">
+          <div class="project-content">
+            <h3>Reviews</h3>
+            <p>Built with HTML, CSS and JavaScript givinig it a clean responsive UI for an enhanced user experience.</p>
+            <div class="project-meta">Tech: HTML, CSS, Java, JQuery</div>
+            <div class="project-links">
+              <a href="https://review-eta-one.vercel.app/" target="_blank" rel="noopener" class="btn-project-demo">Live Demo</a>
+              <a href="https://github.com/adityamshimpi/QuizQuest" target="_blank" rel="noopener" class="btn-project-github">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/newsinn.png" alt="Travel Agency Project Image">
+          <div class="project-content">
+            <h3>NewzIn</h3>
+            <p>Its an Android application which develops an interactive platform leveraging advanced language processing to filter and summarize articles based on user queries. </p>
+            <div class="project-meta">Tech: Flutter, Dart, NLP, Scikit-learn</div>
+            <div class="project-links">
+              <a href="https://drive.google.com/file/d/12a0Zo1oszZr4WQPN_g6fTJ4oGtjg6Ygw/view?usp=sharing" target="_blank" rel="noopener" class="btn-project-demo">Live Demo</a>
+              <a href="https://github.com/the-knight-rider/NewzIn" target="_blank" rel="noopener" class="btn-project-github">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="experience" id="experience">
+      <h2>Experience</h2>
+      <div class="experience-list">
+        <div class="experience-item">
+          <h3>Intern - Web Developer</h3>
+          <span class="exp-org">Agumentik Group of Companies</span>
+          <span class="exp-date">06/2024 - 12/2024 Bengaluru, India</span>
+          <p>Worked as a Web Developer Intern on the NexGen Nexus project, a next-generation HRMS development platform. Responsibilities included designing and developing user-friendly web applications using technologies like HTML, CSS, Java, JQuery, and React. Implemented advanced features aimed at enhancing user experience and operational efficiency.</p>
+        </div>
+      </div>
+    </section>
+    <section class="education" id="education">
+      <h2>Education</h2>
+      <div class="education-list timeline-container">
+        <div class="education-item left">
+          <h3>B. Tech in Information Technology</h3>
+          <span class="edu-org">G.H. Raisoni College of Engineering and Management, Pune</span>
+          <div class="timeline-date-wrapper"><span class="edu-date">2021 – 2025</span></div>
+          <p>CGPA: <strong>8.86</strong></p>
+          <ul>
+            <li>Top 10 - Smart India Hackathon (College Level)</li>
+            <li>GDSC Member</li>
+          </ul>
+        </div>
+        <div class="education-item right">
+          <h3>Senior School Certificate (Class 12)</h3>
+          <span class="edu-org">Kendriya Vidyalaya AFS Deolali, Nashik</span>
+          <div class="timeline-date-wrapper"><span class="edu-date">2019 – 2021</span></div>
+          <p>Score: <strong>89.8%</strong></p>
+          <ul>
+            <li>School Captain 2020-21</li>
+          </ul>
+        </div>
+        <div class="education-item left">
+          <h3>Secondary School Certificate (Class 10)</h3>
+          <span class="edu-org">Kendriya Vidyalaya AFS Deolali, Nashik</span>
+          <div class="timeline-date-wrapper"><span class="edu-date">2018 – 2019</span></div>
+          <p>Score: <strong>88.8%</strong></p>
+          <ul>
+            <li>School Prefect 2018-19</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="certifications" id="certifications">
+      <h2>Certifications</h2>
+      <div class="cert-list">
+        <div class="cert-card">
+          <div class="cert-header">
+          <h3>Google Cloud Skill Badges</h3>
+            <span class="cert-org">Google Cloud Platform</span>
+          </div>
+          <div class="cert-details">
+          <p>Completed multiple hands-on labs and earned skill badges in cloud engineering, AI, and ML on Google Cloud Platform.</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-header">
+          <h3>Generative AI & LLM Courses</h3>
+          <span class="cert-org">Google Developer Student Clubs (GDSC)</span>
+          </div>
+          <div class="cert-details">
+          <p>Completed courses and workshops on Generative AI and Large Language Models.</p>
+        </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-header">
+            <h3>Microsoft Cybersecurity</h3>
+            <span class="cert-org">ICT Academy</span>
+      </div>
+          <div class="cert-details">
+            <p>Participated in cybersecurity training Gained practical knowledge in network security, threat detection, ethical hacking basics, and risk management.</p>
+        </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <h2>Let's Connect</h2>
+      <div class="contact-container">
+        
+        <div class="contact-form-wrapper">
+          <p>Have a project in mind, a question, or just want to say hello? I'd love to hear from you. Fill out the form below, and I'll get back to you as soon as possible.</p>
+          <form name="submit-to-google-sheet">
+            <div class="form-group">
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="Email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" name="Mobile" placeholder="Your Phone Number">
+              <input type="text" name="Subject" placeholder="Subject" required>
+          </div>
+            <textarea name="Message" placeholder="Your Message" rows="6" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+            <div id="msg" class="form-message"></div>
+          </form>
+        </div>
+        
+        <div class="contact-intro">
+          <p class="contact-intro-message">I’m just a message away — connect with me on any of these platforms and let’s talk</p>
+          <div class="contact-social-links">
+            <a href="https://github.com/adityamshimpi" target="_blank" rel="noopener" aria-label="GitHub">
+              <img src="images/svg/github-svgrepo-com.svg" alt="GitHub icon" width="22" height="22">
+            </a>
+            <a href="https://wa.me/919876543210" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <img src="images/svg/whatsapp-svgrepo-com.svg" alt="WhatsApp icon" width="22" height="22">
+            </a>
+            <a href="https://t.me/yourtelegramusername" target="_blank" rel="noopener" aria-label="Telegram">
+              <img src="images/svg/telegram-svgrepo-com.svg" alt="Telegram icon" width="22" height="22">
+            </a>
+            <a href="https://linkedin.com/in/adityamshimpi" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <img src="images/svg/linkedin-svgrepo-com.svg" alt="LinkedIn icon" width="22" height="22">
+            </a>
+            <a href="https://instagram.com/adityamshimpi" target="_blank" rel="noopener" aria-label="Instagram">
+              <img src="images/svg/instagram-1-svgrepo-com.svg" alt="Instagram icon" width="22" height="22">
+            </a>
+            <a href="mailto:adityamshimpi@gmail.com" target="_blank" rel="noopener" aria-label="Email">
+              <img src="images/svg/gmail-svgrepo-com.svg" alt="Email icon" width="22" height="22">
+            </a>
+          </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Aditya Shimpi. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+             const scriptURL = 'https://script.google.com/macros/s/AKfycbxgCUaDotppj3P8dnsgd2goUnN-AQZc27SiNu0d2T462IJ7_SJgR4xuU1AtgvcbqjyN/exec';
 
+             const form = document.forms['submit-to-google-sheet'];
 
+             if (form) {
+                 const formMsg = document.getElementById("msg");
 
-
-
-    <script>
-        var sidemeu = document.getElementById("sidemenu");
-        function openmenu() {
-            sidemeu.style.left = "0px";
-        }
-        function closemenu() {
-            sidemeu.style.left = "-200px";
-        }
-    </script>
-
-
-
-
-
-
-
-
-
-    <script>
-        var sidemeu = document.getElementById("sidemenu");
-        sidemenu.style.left = "-200px";
-        function openmenu() {
-            sidemeu.style.left = "0px";
-        }
-        function closemenu() {
-            sidemeu.style.left = "-200px";
-        }
-    </script>
-
-
-
-    <script>
-        var darkMobile = document.getElementById("dark-mobile");
-        darkMobile.onclick = function () {
-            document.body.classList.toggle("dark-theme1");
-            if (document.body.classList.contains("dark-theme1")) {
-                darkMobile.src = "images/light-mode.png";
-            } else {
-                darkMobile.src = "images/night-mode.png";
-            }
-        }
-    </script>
-
-
-
-
+                 form.addEventListener('submit', e => {
+                     e.preventDefault();
+                     form.classList.add('is-submitting'); // Add class when submitting
+                     formMsg.innerHTML = ""; // Clear previous messages
+                     formMsg.classList.remove('success', 'error'); // Clear previous states
+                     
+                     // Create FormData object
+                     const formData = new FormData(form);
+                     
+                     // Add timestamp to the form data
+                     const now = new Date();
+                     const timestamp = now.toLocaleString('en-US', {
+                         year: 'numeric',
+                         month: '2-digit',
+                         day: '2-digit',
+                         hour: '2-digit',
+                         minute: '2-digit',
+                         second: '2-digit',
+                         hour12: false
+                     });
+                     formData.append('Timestamp', timestamp);
+                     
+                     fetch(scriptURL, { method: 'POST', body: formData })
+                         .then(response => {
+                             form.classList.remove('is-submitting'); // Remove class on success
+                             formMsg.innerHTML = `Message Sent Successfully`;
+                             formMsg.classList.add('success');
+                             setTimeout(function () {
+                                 formMsg.innerHTML = "";
+                                 formMsg.classList.remove('success');
+                             }, 5000);
+                             form.reset();
+                         })
+                         .catch(error => {
+                             form.classList.remove('is-submitting'); // Remove class on error
+                             console.error('Error!', error.message);
+                             formMsg.innerHTML = "Error sending message. Please try again.";
+                             formMsg.classList.add('error');
+                             setTimeout(function () {
+                                 formMsg.innerHTML = "";
+                                 formMsg.classList.remove('error');
+                             }, 5000);
+                         });
+                 });
+             }
+         </script>
 </body>
-
-</html>
+</html> 
