@@ -653,7 +653,7 @@ body.dark-mode .education {
   color: var(--primary);
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  text-align: center;
+  text-align: justify;
 }
 .education-list {
   display: block; /* Change from flex to block for timeline layout */
@@ -704,13 +704,13 @@ body.dark-mode .education {
 .education-item.left {
   float: left; /* Use float for left/right positioning */
   clear: both; /* Clear floats to stack */
-  text-align: right; /* Align content to the right for left items */
+  text-align: justify; /* Align content to the right for left items */
   padding-right: 50px; /* Space for date wrapper and arrow */
 }
 .education-item.right {
   float: right; /* Use float for left/right positioning */
   clear: both; /* Clear floats to stack */
-  text-align: left; /* Align content to the left for right items */
+  text-align: justify; /* Align content to the left for right items */
   padding-left: 50px; /* Space for date wrapper and arrow */
 }
 .education-item.left::before {
@@ -810,6 +810,11 @@ body.dark-mode .timeline-date-wrapper {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(44, 62, 80, 0.25);
 }
+/* @media screen and (max-width: 600px) {
+.education{
+  flex-direction: row;
+}
+} */
 
 .certifications {
   margin-bottom: 3rem;
@@ -1796,6 +1801,7 @@ body.dark-mode .experience-item p {
   opacity: 1; /* Reveal content on hover */
   padding: 1.5rem; /* Apply full padding on hover */
 }
+
 body.dark-mode .cert-list {
   /* Dark mode grid styles if needed */
 }
@@ -1836,8 +1842,10 @@ body.dark-mode .cert-details ul {
   }
   .cert-card {
     padding: 1.5rem;
+    padding-bottom: 0.5rem;
   }
   .cert-details {
     padding: 1rem;
+    padding-bottom: 0;
   }
 } 
