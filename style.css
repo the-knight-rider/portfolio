@@ -12,6 +12,8 @@
   --primary-hover: #4a7ae6;
   --accent-hover: #ffc107;
   --radius-large: 10px;
+  --para: black;
+  --para2: black;
 }
 
 /* Global animations */
@@ -169,15 +171,25 @@ header {
     right: 0;
     background: var(--bg);
     flex-direction: column;
-    width: 200px;
+    width: 40vw;
+    height: 100vh;
     box-shadow: var(--shadow);
-    padding: 1.5rem 0;
-    gap: 1.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    /* gap: 1rem; */
     transform: translateX(100%);
     opacity: 0;
     pointer-events: none;
     transition: var(--transition);
   }
+  .nav-links li{
+    margin: 0;
+    padding: 0;
+    border-bottom: solid 1px black;
+    padding-bottom: 1.5rem;
+  }
+
   .nav-links.active {
     transform: translateX(0);
     opacity: 1;
@@ -330,6 +342,15 @@ body.dark-mode .hero-container {
   .hero-content {
     align-items: center;
     padding-left: 0;
+    
+  }
+  .hero-subheading{
+    color: var(--para2);
+  }
+  .hero-content p{
+    text-align:justify;
+    padding: 20px;
+    color: var(--para);
   }
   .hero-buttons {
     justify-content: center;
@@ -342,14 +363,15 @@ body.dark-mode .hero-container {
   .hero-image {
     padding-right: 0;
   }
+  
 }
 @media (max-width: 600px) {
   .hero-content h1 {
     font-size: 2rem;
   }
   .profile-photo {
-    width: 110px;
-    height: 110px;
+    width: 20rem;
+    height: 20rem;
     border-radius: 16px;
   }
   .hero-container {
@@ -416,7 +438,7 @@ body.dark-mode .about {
   line-height: 1.8;
   max-width: 800px;
   margin: 0 auto 1.5rem auto;
-  text-align: left;
+  text-align: justify;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease-out 0.3s, transform 0.8s ease-out 0.3s;
@@ -1246,6 +1268,8 @@ body.dark-mode {
   --text: #e6eaf3;
   --bg: linear-gradient(135deg, #181c24 0%, #232946 100%);
   --shadow: 0 4px 24px rgba(0,0,0,0.25);
+  --para: white;
+  --para2: #ffc107;
 }
 body.dark-mode {
   background: var(--bg);
