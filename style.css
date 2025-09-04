@@ -635,11 +635,10 @@ body.dark-mode .experience-item {
 }
 
 .education {
-  margin-bottom: 3rem;
   background: #f0f4f8; /* A slightly different light background */
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 2.5rem 2rem;
+  padding: 2.5rem 2rem 0rem 2rem;
   border-top: 8px solid var(--primary);
   border-bottom: 8px solid var(--primary);
   position: relative; /* For timeline line */
@@ -654,7 +653,7 @@ body.dark-mode .education {
   color: var(--primary);
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  text-align: justify;
+  text-align: center;
 }
 .education-list {
   display: block; /* Change from flex to block for timeline layout */
@@ -664,6 +663,7 @@ body.dark-mode .education {
   padding: 20px 0; /* Add top/bottom padding to the list itself */
   overflow: hidden; /* Ensure content stays within */
 }
+
 .education-list::before {
   /* content: ''; */
   position: absolute;
@@ -706,16 +706,16 @@ body.dark-mode .education {
   float: left; /* Use float for left/right positioning */
   clear: both; /* Clear floats to stack */
   text-align: justify; /* Align content to the right for left items */
-  padding-right: 50px; /* Space for date wrapper and arrow */
+  /* padding-right: 50px; Space for date wrapper and arrow */
 }
 .education-item.right {
   float: right; /* Use float for left/right positioning */
   clear: both; /* Clear floats to stack */
   text-align: justify; /* Align content to the left for right items */
-  padding-left: 50px; /* Space for date wrapper and arrow */
+  /* padding-left: 50px; Space for date wrapper and arrow */
 }
 .education-item.left::before {
-  content: " ";
+  /* content: " "; */
   height: 0;
   position: absolute;
   top: 30px; /* Adjust position for new dot size */
@@ -727,7 +727,7 @@ body.dark-mode .education {
   border-color: transparent transparent transparent #fdfdfd; /* Match item background for arrow */
 }
 .education-item.right::before {
-  content: " ";
+  /* content: " "; */
   height: 0;
   position: absolute;
   top: 30px; /* Adjust position for new dot size */
@@ -738,9 +738,7 @@ body.dark-mode .education {
   border-width: 10px 10px 10px 0;
   border-color: transparent #fdfdfd transparent transparent; /* Match item background for arrow */
 }
-.education-item.right::after {
-  left: -15px; /* Position of the dot for right items */
-}
+
 .timeline-date-wrapper {
   position: absolute;
   top: 25px; /* Adjust top position for better alignment with dot */
@@ -811,11 +809,54 @@ body.dark-mode .timeline-date-wrapper {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(44, 62, 80, 0.25);
 }
-/* @media screen and (max-width: 600px) {
-.education{
-  flex-direction: row;
+
+@media (max-width: 600px) {
+  .education-item {
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    background: #fdfdfd; /* Lighter background for items */
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 40px; /* Increased space between items */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Add smooth transition */
+    z-index: 1; /* Ensure item is above the line */
+    width: 100%;
+  }
+ 
+  .timeline-date-wrapper {
+    position: absolute;
+    top:-50px; /* Adjust top position for better alignment with dot */
+    width: 100%; /* Make date wrapper span full width of its side */
+    text-align: center;
+    z-index: 2; /* Bring date to front */
+    font-weight: 700; /* Bolder font */
+    color: #fff;
+    background: linear-gradient(135deg, var(--primary), var(--accent)); /* Gradient for date tag */
+    padding: 6px 12px; /* Slightly reduced padding */
+    border-radius: 12px; /* Less rounded corners for a sleeker look */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Subtle shadow for the date tag */
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+  }
+  .education-item.left .timeline-date-wrapper {
+    left: 0px; /* Adjust position relative to floated item */
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%); /* Left-pointing triangle shape (was right) */
+  }
+  .education-item.right .timeline-date-wrapper {
+    right: 0px ; 
+    transform: none; /* Remove transform as floats handle positioning */
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%); /* Right-pointing triangle shape (was left) */
+  }
+  .education-item.left{
+    margin-top: 30px;
+  }
+  .education-item.right{
+    margin-top: 30px;
+    }
+  .education {
+    padding-bottom: 0rem;
+  }
 }
-} */
 
 .certifications {
   margin-bottom: 3rem;
