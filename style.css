@@ -14,6 +14,7 @@
   --radius-large: 10px;
   --para: black;
   --para2: black;
+  --hiiam:rgb(0, 0, 0);
 }
 
 /* Global animations */
@@ -266,7 +267,7 @@ body.dark-mode .hero-container {
   font-size: 3.2rem;
   font-weight: 900;
   margin-bottom: 0.5rem;
-  color: #111;
+  color:var(--hiiam);
   background: none;
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
@@ -283,13 +284,13 @@ body.dark-mode .hero-container {
   font-size: 1.6rem;
   font-style: italic;
   font-weight: 500;
-  color: #222;
+  color: var(--para2);
   margin-bottom: 1.2rem;
   animation: slideInUp 1.2s ease-out 0.6s backwards;
 }
 .hero-content p {
   font-size: 1.1rem;
-  color: #222;
+  color: var(--para);
   margin-bottom: 2.2rem;
   line-height: 1.7;
   max-width: 600px;
@@ -664,7 +665,7 @@ body.dark-mode .education {
   overflow: hidden; /* Ensure content stays within */
 }
 .education-list::before {
-  content: '';
+  /* content: ''; */
   position: absolute;
   width: 0; /* Changed to 0 to hide the vertical line */
   background-color: var(--accent); /* Change line color to accent */
@@ -691,7 +692,7 @@ body.dark-mode .education {
   box-shadow: 0 12px 30px rgba(44, 62, 80, 0.25); /* Enhanced shadow on hover */
 }
 .education-item::after {
-  content: '';
+  /* content: ''; */
   position: absolute;
   width: 0; /* Changed to 0 to hide the dot */
   height: 0; /* Changed to 0 to hide the dot */
@@ -1275,6 +1276,7 @@ body.dark-mode {
   --shadow: 0 4px 24px rgba(0,0,0,0.25);
   --para: white;
   --para2: #ffc107;
+  --hiiam:rgba(0, 26, 255, 0.722);
 }
 body.dark-mode {
   background: var(--bg);
