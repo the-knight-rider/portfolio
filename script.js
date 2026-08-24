@@ -255,7 +255,8 @@ if (certList) {
 // ==========================================
 const form = document.forms['submit-to-google-sheet'];
 if (form) {
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxgCUaDotppj3P8dnsgd2goUnN-AQZc27SiNu0d2T462IJ7_SJgR4xuU1AtgvcbqjyN/exec';
+  // const scriptURL = 'https://script.google.com/macros/s/AKfycbxgCUaDotppj3P8dnsgd2goUnN-AQZc27SiNu0d2T462IJ7_SJgR4xuU1AtgvcbqjyN/exec';
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwcxrrGSAuOciykOl6-ZHh3riRnh66URapDq32CcOAt6wLq3VP7N9WNhU5Q5_fm-933aw/exec';
   const formMsg   = document.getElementById('msg');
 
   form.addEventListener('submit', (e) => {
