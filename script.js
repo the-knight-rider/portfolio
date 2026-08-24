@@ -206,44 +206,62 @@ sections.forEach(section => revealObserver.observe(section));
 // });
 const themeToggle = document.getElementById('themeToggle');
 const themeIcon = document.getElementById('themeIcon');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 
+// Determine if we are currently in Day or Night
+function getCurrentPeriod() {
+  const hour = new Date().getHours();
+  return (hour >= 7 && hour < 19) ? 'day' : 'night';
+}
+
+// Time-based theme
+function getTimeBasedTheme() {
+  return getCurrentPeriod() === 'night' ? 'dark' : 'light';
+}
+
+// Apply theme to DOM
 function setTheme(mode) {
   const isDark = mode === 'dark';
   document.body.classList.toggle('dark-mode', isDark);
   themeIcon.textContent = isDark ? '☀️' : '🌙';
 }
 
-function getTimeBasedTheme() {
-  const hour = new Date().getHours();
-  return (hour >= 19 || hour < 7) ? 'dark' : 'light';
+// Main logic: respect manual choice ONLY if set during current time period
+function applyTheme() {
+  const currentPeriod = getCurrentPeriod();
+  const savedTheme    = localStorage.getItem('theme');
+  const savedPeriod   = localStorage.getItem('themePeriod');
+
+  if (savedTheme && savedPeriod === currentPeriod) {
+    // Same day/night period → manual override is still valid
+    setTheme(savedTheme);
+  } else {
+    // Period changed (or no override) → revert to time-based
+    setTheme(getTimeBasedTheme());
+    
+    // Clean up expired manual choice
+    if (savedTheme) {
+      localStorage.removeItem('theme');
+      localStorage.removeItem('themePeriod');
+    }
+  }
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-  const saved = localStorage.getItem('theme');
-  
-  if (saved === 'dark' || saved === 'light') {
-    setTheme(saved);
-  } else if (prefersDark.matches) {
-    setTheme('dark');
-  } else {
-    setTheme(getTimeBasedTheme());
-  }
-});
+// Run on every page load
+window.addEventListener('DOMContentLoaded', applyTheme);
 
-// Optional: react to OS changes if user hasn't manually set
-prefersDark.addEventListener('change', (e) => {
-  if (!localStorage.getItem('theme')) {
-    setTheme(e.matches ? 'dark' : 'light');
-  }
-});
-
+// Manual toggle
 themeToggle.addEventListener('click', () => {
   const newTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+  const currentPeriod = getCurrentPeriod();
+
+  // Lock this choice to the current time period
   localStorage.setItem('theme', newTheme);
+  localStorage.setItem('themePeriod', currentPeriod);
+
   setTheme(newTheme);
 });
 
+// Keyboard support
 themeToggle.addEventListener('keydown', (e) => {
   if (e.key === 'Enter' || e.key === ' ') {
     e.preventDefault();
