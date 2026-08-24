@@ -204,62 +204,46 @@ sections.forEach(section => revealObserver.observe(section));
 //     setTheme(getTimeBasedTheme());
 //   }
 // });
-// Theme toggle
 const themeToggle = document.getElementById('themeToggle');
 const themeIcon = document.getElementById('themeIcon');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 
-// Set theme
 function setTheme(mode) {
-  if (mode === 'dark') {
-    document.body.classList.add('dark-mode');
-    themeIcon.textContent = '☀️';
-  } else {
-    document.body.classList.remove('dark-mode');
-    themeIcon.textContent = '🌙';
-  }
+  const isDark = mode === 'dark';
+  document.body.classList.toggle('dark-mode', isDark);
+  themeIcon.textContent = isDark ? '☀️' : '🌙';
 }
 
-// Get theme based on current time
 function getTimeBasedTheme() {
   const hour = new Date().getHours();
   return (hour >= 19 || hour < 7) ? 'dark' : 'light';
 }
 
-// Apply automatic theme
-function applyAutoTheme() {
-  const autoTheme = getTimeBasedTheme();
-  setTheme(autoTheme);
-}
-
-// On page load
 window.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme');
-
-  if (savedTheme === 'dark' || savedTheme === 'light') {
-    // Manual override exists
-    setTheme(savedTheme);
+  const saved = localStorage.getItem('theme');
+  
+  if (saved === 'dark' || saved === 'light') {
+    setTheme(saved);
+  } else if (prefersDark.matches) {
+    setTheme('dark');
   } else {
-    // No manual override → follow time
-    applyAutoTheme();
+    setTheme(getTimeBasedTheme());
   }
 });
 
-// Manual theme toggle
+// Optional: react to OS changes if user hasn't manually set
+prefersDark.addEventListener('change', (e) => {
+  if (!localStorage.getItem('theme')) {
+    setTheme(e.matches ? 'dark' : 'light');
+  }
+});
+
 themeToggle.addEventListener('click', () => {
-  const currentTheme = document.body.classList.contains('dark-mode')
-    ? 'dark'
-    : 'light';
-
-  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-  // Save manual choice
+  const newTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
   localStorage.setItem('theme', newTheme);
-
-  // Apply manual choice
   setTheme(newTheme);
 });
 
-// Keyboard support
 themeToggle.addEventListener('keydown', (e) => {
   if (e.key === 'Enter' || e.key === ' ') {
     e.preventDefault();
