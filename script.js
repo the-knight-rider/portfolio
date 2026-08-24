@@ -204,57 +204,85 @@ sections.forEach(section => revealObserver.observe(section));
 //     setTheme(getTimeBasedTheme());
 //   }
 // });
+
+
+// // Respect live system theme changes (only if user hasn't manually set)
+// prefersDark.addEventListener('change', (e) => {
+//   if (!localStorage.getItem('theme')) {
+//     setTheme(e.matches ? 'dark' : 'light');
+//   }
+// });
+
+// themeToggle.addEventListener('click', () => {
+//   setTheme(document.body.classList.contains('dark-mode') ? 'light' : 'dark');
+// });
+
+// themeToggle.addEventListener('keydown', (e) => {
+//   if (e.key === 'Enter' || e.key === ' ') {
+//     e.preventDefault();
+//     themeToggle.click();
+//   }
+// });
+
+// Theme toggle
 const themeToggle = document.getElementById('themeToggle');
 const themeIcon = document.getElementById('themeIcon');
 
-// Determine if we are currently in Day or Night
+// Determine current time period
+// Day:   7:00 AM - 6:59 PM
+// Night: 7:00 PM - 6:59 AM
 function getCurrentPeriod() {
   const hour = new Date().getHours();
   return (hour >= 7 && hour < 19) ? 'day' : 'night';
 }
 
-// Time-based theme
+// Get automatic theme based on time
 function getTimeBasedTheme() {
   return getCurrentPeriod() === 'night' ? 'dark' : 'light';
 }
 
-// Apply theme to DOM
+// Apply theme to the page
 function setTheme(mode) {
   const isDark = mode === 'dark';
+
   document.body.classList.toggle('dark-mode', isDark);
   themeIcon.textContent = isDark ? '☀️' : '🌙';
 }
 
-// Main logic: respect manual choice ONLY if set during current time period
+// Apply theme when page loads
 function applyTheme() {
   const currentPeriod = getCurrentPeriod();
-  const savedTheme    = localStorage.getItem('theme');
-  const savedPeriod   = localStorage.getItem('themePeriod');
 
+  const savedTheme = localStorage.getItem('theme');
+  const savedPeriod = localStorage.getItem('themePeriod');
+
+  // Use manual choice only if it belongs to the current
+  // day/night period
   if (savedTheme && savedPeriod === currentPeriod) {
-    // Same day/night period → manual override is still valid
     setTheme(savedTheme);
   } else {
-    // Period changed (or no override) → revert to time-based
+    // No valid manual override → use automatic time-based theme
     setTheme(getTimeBasedTheme());
-    
-    // Clean up expired manual choice
-    if (savedTheme) {
-      localStorage.removeItem('theme');
-      localStorage.removeItem('themePeriod');
-    }
+
+    // Remove expired manual override
+    localStorage.removeItem('theme');
+    localStorage.removeItem('themePeriod');
   }
 }
 
-// Run on every page load
+// Run when page loads
 window.addEventListener('DOMContentLoaded', applyTheme);
 
-// Manual toggle
+// Manual theme toggle
 themeToggle.addEventListener('click', () => {
-  const newTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+  const currentTheme = document.body.classList.contains('dark-mode')
+    ? 'dark'
+    : 'light';
+
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
   const currentPeriod = getCurrentPeriod();
 
-  // Lock this choice to the current time period
+  // Save manual choice only for the current period
   localStorage.setItem('theme', newTheme);
   localStorage.setItem('themePeriod', currentPeriod);
 
@@ -269,24 +297,21 @@ themeToggle.addEventListener('keydown', (e) => {
   }
 });
 
-// Respect live system theme changes (only if user hasn't manually set)
-prefersDark.addEventListener('change', (e) => {
-  if (!localStorage.getItem('theme')) {
-    setTheme(e.matches ? 'dark' : 'light');
+// Automatically detect when day/night period changes
+// while the website remains open
+setInterval(() => {
+  const currentPeriod = getCurrentPeriod();
+  const savedPeriod = localStorage.getItem('themePeriod');
+
+  if (savedPeriod && savedPeriod !== currentPeriod) {
+    // Manual override has expired
+    localStorage.removeItem('theme');
+    localStorage.removeItem('themePeriod');
+
+    // Return to automatic theme
+    setTheme(getTimeBasedTheme());
   }
-});
-
-themeToggle.addEventListener('click', () => {
-  setTheme(document.body.classList.contains('dark-mode') ? 'light' : 'dark');
-});
-
-themeToggle.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter' || e.key === ' ') {
-    e.preventDefault();
-    themeToggle.click();
-  }
-});
-
+}, 60000); // Check every 1 minute
 // ==========================================
 // Certifications Reveal (Mouse + Touch)
 // ==========================================
